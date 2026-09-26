@@ -90,8 +90,8 @@ final class SwitchApp: NSObject, NSApplicationDelegate {
         shell.addSubview(Studio.line(NSRect(x:270,y:648,width:700,height:1)))
         shell.addSubview(Studio.line(NSRect(x:239,y:0,width:1,height:740)))
         shell.addSubview(Studio.artwork("workshop-header",NSRect(x:990,y:572,width:280,height:146)))
-        content.addSubview(Studio.text("Choose your connection",NSRect(x:32,y:515,width:620,height:44),30,.semibold,Studio.navy))
-        content.addSubview(Studio.text("Switch each client independently. Apply when you’re ready.",NSRect(x:32,y:480,width:660,height:26),14,.regular,Studio.muted))
+        content.addSubview(Studio.text("Choose your connection",NSRect(x:22,y:585,width:620,height:42),28,.semibold,Studio.navy))
+        content.addSubview(Studio.text("Switch each client independently. Apply when you’re ready.",NSRect(x:22,y:560,width:660,height:24),13,.regular,Studio.muted))
         let rows:[(String,String,String,CGFloat)] = [
             ("workshop-desktop","Claude Desktop","Off returns to direct Claude sign-in after restarting.",395),
             ("workshop-code","Claude Code","Off returns the terminal client to its normal sign-in.",295),

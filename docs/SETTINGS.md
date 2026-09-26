@@ -93,7 +93,7 @@ Displays the sessions reported by the supported Claude Code session command. Ref
 
 ## Mods → Jev
 
-Public skill results appear as compact source cards with expandable excerpts and a review/import action. Recent activity scrolls within a fixed-height panel; Clear activity removes only the stored recent checks, preserving settings and credentials.
+Public skill results appear as compact source cards with expandable excerpts and a review/import action. Each workspace uses one detail scroller and a footer anchored at the bottom. Jev separates Configuration, Skill discovery and Activity into tabs. Activity shows five checks per page; Clear activity removes only the stored recent checks, preserving settings and credentials.
 
 ![OpenRouter configuration](screenshots/mods-jev.png)
 

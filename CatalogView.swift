@@ -15,15 +15,15 @@ final class CatalogView: NSView, NSTableViewDataSource, NSTableViewDelegate, NSS
     override init(frame: NSRect) {
         super.init(frame:frame)
         wantsLayer=true;layer?.backgroundColor=Studio.paper.cgColor
-        addSubview(Studio.text("Find your next tool",NSRect(x:22,y:540,width:630,height:42),28,.semibold,Studio.navy))
-        addSubview(Studio.text("Browse providers, choose a connection, and configure your clients.",NSRect(x:22,y:515,width:1020,height:24),13,.regular,Studio.muted))
-        search.frame=NSRect(x:22,y:467,width:520,height:32);search.placeholderString="Search connectors, providers, or categories";search.delegate=self;addSubview(search)
-        filter.frame=NSRect(x:555,y:467,width:220,height:32);filter.addItems(withTitles:["All MCPs","Remote servers","Local servers & extensions","Registered"]);filter.target=self;filter.action=#selector(filterChanged);addSubview(filter)
-        button("Refresh directory",#selector(refresh),NSRect(x:790,y:466,width:175,height:34))
-        let scroll=NSScrollView(frame:NSRect(x:22,y:88,width:560,height:360));scroll.hasVerticalScroller=true;scroll.borderType = .noBorder;scroll.wantsLayer=true;scroll.layer?.cornerRadius=10
+        addSubview(Studio.text("Find your next tool",NSRect(x:22,y:585,width:630,height:42),28,.semibold,Studio.navy))
+        addSubview(Studio.text("Browse providers, choose a connection, and configure your clients.",NSRect(x:22,y:560,width:1020,height:24),13,.regular,Studio.muted))
+        search.frame=NSRect(x:22,y:512,width:520,height:32);search.placeholderString="Search connectors, providers, or categories";search.delegate=self;addSubview(search)
+        filter.frame=NSRect(x:555,y:512,width:220,height:32);filter.addItems(withTitles:["All MCPs","Remote servers","Local servers & extensions","Registered"]);filter.target=self;filter.action=#selector(filterChanged);addSubview(filter)
+        button("Refresh directory",#selector(refresh),NSRect(x:790,y:511,width:175,height:34))
+        let scroll=NSScrollView(frame:NSRect(x:22,y:88,width:560,height:405));scroll.hasVerticalScroller=true;scroll.borderType = .noBorder;scroll.wantsLayer=true;scroll.layer?.cornerRadius=10
         for (id,title,width) in [("title","Connector",335.0),("type","Connection",80.0),("installed","Registered",125.0)] {let col=NSTableColumn(identifier:NSUserInterfaceItemIdentifier(id));col.title=title;col.width=width;table.addTableColumn(col)}
         table.delegate=self;table.dataSource=self;table.rowHeight=58;table.intercellSpacing=NSSize(width:0,height:2);table.usesAlternatingRowBackgroundColors=false;table.style = .fullWidth;table.selectionHighlightStyle = .regular;table.backgroundColor = .white;scroll.documentView=table;addSubview(scroll)
-        addSubview(Studio.line(NSRect(x:603,y:88,width:1,height:360)))
+        addSubview(Studio.line(NSRect(x:603,y:88,width:1,height:405)))
         detailLogo.frame=NSRect(x:628,y:390,width:50,height:50);detailLogo.imageScaling = .scaleProportionallyUpOrDown;addSubview(detailLogo);addSubview(inspectorTitle);addSubview(inspectorAuthor)
         let details=NSScrollView(frame:NSRect(x:628,y:190,width:335,height:165));details.hasVerticalScroller=true;details.drawsBackground=false;detail.frame=NSRect(x:0,y:0,width:315,height:360);detail.font = .systemFont(ofSize:13);details.documentView=detail;addSubview(details)
         desktop.frame=NSRect(x:628,y:155,width:335,height:26);desktop.state = .on;addSubview(desktop)
