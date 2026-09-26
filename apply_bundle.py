@@ -5,7 +5,7 @@ import codex_switch as c
 from pathlib import Path
 
 def apply(desktop,code,codex,model):
- paths=[r.CODE_SETTINGS,r.DESKTOP_SETTINGS,r.PROFILE_META,r.GATEWAY_PROFILE,r.ZSHRC,c.CONFIG,c.STATE,r.STATE_ROOT/'original-desktop-inference.json']
+ paths=[r.CODE_SETTINGS,r.DESKTOP_SETTINGS,r.PROFILE_META,r.GATEWAY_PROFILE,r.ZSHRC,c.CONFIG,c.STATE,r.STATE_ROOT/'original-desktop-inference.json',r.STATE_ROOT/'original-code-model.json']
  originals={p:p.read_bytes() if p.exists() else None for p in paths}
  try:
   previous=c.status()['codex_gateway']

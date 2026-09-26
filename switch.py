@@ -139,6 +139,16 @@ def apply(desktop_on, code_on):
     else:
         desktop["deploymentMode"] = "1p"
 
+    model_state=STATE_ROOT/'original-code-model.json'
+    model_original=read_json(model_state) if model_state.exists() else None
+    if code_on and ACTIVE_GATEWAY.get('kind')=='Ollama':
+        if model_original is None:
+            write_atomic(model_state,dump_json({'present':'ANTHROPIC_MODEL' in env,'value':env.get('ANTHROPIC_MODEL')}))
+        env['ANTHROPIC_MODEL']=ACTIVE_GATEWAY['claudeModel']
+    elif model_original is not None:
+        if model_original['present']:env['ANTHROPIC_MODEL']=model_original['value']
+        else:env.pop('ANTHROPIC_MODEL',None)
+        model_state.unlink()
     if code_on:
         if env.get("ANTHROPIC_API_KEY") not in (None, "") or env.get("ANTHROPIC_AUTH_TOKEN") not in (None, ""):
             raise ValueError("Claude Code settings contain another gateway credential; remove that conflict first")
@@ -183,7 +193,7 @@ def apply(desktop_on, code_on):
     return {
         **after,
         "desktop_restart_needed": before["desktop_gateway"] != after["desktop_gateway"] or before["desktop_label"] != after["desktop_label"] or any(str(p)==str(GATEWAY_PROFILE) for p,_ in changes),
-        "code_new_terminal_needed": before["code_gateway"] != after["code_gateway"] or before["old_shell_export"],
+        "code_new_terminal_needed": before["code_gateway"] != after["code_gateway"] or before["old_shell_export"] or any(p==CODE_SETTINGS for p,_ in changes),
         "changed": [str(path) for path, _ in changes],
         "backup": str(backup) if backup else None,
     }

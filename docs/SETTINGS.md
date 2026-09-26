@@ -23,14 +23,23 @@ The three clients can be switched independently. Consumer ChatGPT has no custom 
 Create a profile, then configure:
 
 - **Profile name:** a label for your own deployment.
-- **Gateway type:** Custom, LiteLLM or Bifrost. Selecting a type does not install a server.
+- **Gateway type:** Custom, LiteLLM, Bifrost or Ollama. Selecting a type does not install a server.
 - **Claude base URL:** the deployment's Anthropic-compatible endpoint.
 - **Codex base URL:** the deployment's Responses-compatible endpoint.
 - **Model discovery URL:** optional override when discovery lives at a separate endpoint.
 - **Credential source:** macOS Keychain, environment-variable reference or executable helper. Enter a reference or helper path, not an API key in the URL or profile text fields.
-- **Save & select / Use this profile:** select the profile. Apply client routing separately in Connections.
+- **Apply this profile to clients already using a gateway:** enabled by default when saving. Updates currently enabled routes and offers a normal quit/reopen for affected running desktop apps. Uncheck it to save/select only; apply routing later in Connections. CLI sessions must be started again separately.
+- **Save & select / Use this profile:** save the profile and selected behavior, or select an existing profile. Use Connections to enable additional clients.
 
 HTTPS is required for remote profiles; localhost HTTP is supported. Finder-launched applications do not automatically inherit every shell environment export. Keychain references avoid that dependency. Gateway support for streaming, tools, model discovery and the Responses API must be provided by your deployment.
+
+### Local Ollama
+
+Choose **Ollama** to populate `http://localhost:11434` for Claude, `http://localhost:11434/v1` for Codex and `/v1/models` for discovery. Click **Load Ollama models**, choose an exact available model ID, then save. The app does not download models or install/start Ollama. Local Ollama requires no API secret; its credential helper supplies the ignored `ollama` placeholder.
+
+Use tool-capable models and configure sufficient context in Ollama (its coding guides recommend at least 64k). Models tagged `cloud` may use Ollama Cloud and require its sign-in. This preset accepts localhost endpoints only; use an authenticated Custom profile for a remote deployment. Claude Code receives the selected `ANTHROPIC_MODEL`; its previous model setting is restored when leaving Ollama. Desktop uses the local gateway's discovered model list; choose an available model in the client. Model/tool compatibility varies, so registration and routing do not guarantee every agent feature works.
+
+References: [Ollama Claude Code integration](https://docs.ollama.com/integrations/claude-code), [Ollama Codex integration](https://docs.ollama.com/integrations/codex), [API compatibility](https://docs.ollama.com/api/openai-compatibility).
 
 ## MCP Catalog
 

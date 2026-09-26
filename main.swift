@@ -70,7 +70,7 @@ final class SwitchApp: NSObject, NSApplicationDelegate {
         if let url=Bundle.main.url(forResource:"pixel-switch-icon",withExtension:"png"),let image=NSImage(contentsOf:url){_ = image;sidebar.addSubview(Studio.artwork("pixel-switch-sidebar",NSRect(x:27,y:632,width:86,height:86)))}
         sidebar.addSubview(Studio.text("Control Studio",NSRect(x:23,y:601,width:200,height:30),20,.semibold,Studio.navy))
         sidebar.addSubview(Studio.text("AI models & tools",NSRect(x:23,y:578,width:155,height:22),12,.regular,Studio.muted))
-        for (index,title,symbol) in [(0,"Connections","switch.2"),(1,"MCP Catalog","puzzlepiece.extension"),(2,"Code Studio","square.and.pencil"),(3,"Gateway profiles","network"),(4,"Mods","slider.horizontal.3"),(5,"Secret Manager","key.horizontal")] {
+        for (index,title,symbol) in [(0,"Connections","switch.2"),(1,"MCP Catalog","puzzlepiece.extension"),(2,"Code Studio","square.and.pencil"),(3,"Gateway profiles","network"),(4,"Mods","slider.horizontal.3"),(5,"Secret Manager","key.fill")] {
             let b=SidebarButton(title:title,target:self,action:#selector(navigate));b.tag=index;b.frame=NSRect(x:18,y:506-CGFloat(index)*68,width:204,height:54);b.bezelStyle = .inline;b.setButtonType(.toggle);b.isBordered=false;b.wantsLayer=true;b.state=index==0 ? .on:.off;b.setAccessibilityValue(index==0 ? "Selected":"");b.image=NSImage(systemSymbolName:symbol,accessibilityDescription:nil);b.imagePosition = .imageLeading;b.alignment = .left;b.contentTintColor=Studio.navy;sidebar.addSubview(b);navButtons.append(b)
         }
         sidebar.addSubview(Studio.text("Local configuration\nYour existing sign-in",NSRect(x:23,y:25,width:155,height:45),12,.regular,Studio.muted))

@@ -63,7 +63,7 @@ final class ConfigurationStudioView:NSView,WKScriptMessageHandler,WKNavigationDe
                 try process.run();input.fileHandleForWriting.write(try JSONSerialization.data(withJSONObject:payload));try input.fileHandleForWriting.close()
                 let data=output.fileHandleForReading.readDataToEndOfFile();process.waitUntilExit()
                 let result=try JSONSerialization.jsonObject(with:data) as! [String:Any]
-                DispatchQueue.main.async {self.reply(id,result);if op=="jev-save",result["ok"] as? Bool == true {ClientReload.offer(["desktop"],message:"Jev settings saved. Start a new Claude Code session to load its MCP and guidance hook.")}}
+                DispatchQueue.main.async {self.reply(id,result);if op=="profile-save",result["ok"] as? Bool == true,result["applied"] is [String:Any] {ClientReload.offer(result["reloadTargets"] as? [String] ?? [],message:"Gateway profile applied to enabled clients. Start a new Claude Code terminal/session if its route changed.")};if op=="jev-save",result["ok"] as? Bool == true {ClientReload.offer(["desktop"],message:"Jev settings saved. Start a new Claude Code session to load its MCP and guidance hook.")}}
             } catch {DispatchQueue.main.async {self.reply(id,["ok":false,"error":error.localizedDescription])}}
         }
     }

@@ -1,5 +1,5 @@
 """Named gateway profiles, credential references only; preserves legacy storage for migration."""
-import json,re,sys,os,subprocess,shlex
+import json,re,sys,os,subprocess,shlex,urllib.request,importlib
 import secret_store
 from pathlib import Path
 from urllib.parse import urlparse
@@ -18,9 +18,23 @@ def token(p=None):
  p=p or selected();result=subprocess.run([helper(p)],capture_output=True,text=True,timeout=180)
  if result.returncode or not result.stdout.strip():raise ValueError('Credential helper returned no key. Sign in or configure the referenced credential environment variable for GUI apps.')
  return result.stdout.strip()
+def local_url(value):
+ u=urlparse(value)
+ return u.scheme in ('http','https') and u.hostname in ('localhost','127.0.0.1','::1') and not (u.username or u.password or u.query or u.fragment)
+def ollama_models(url):
+ if not local_url(url):raise ValueError('Ollama discovery requires a localhost endpoint.')
+ try:
+  with urllib.request.urlopen(url,timeout=10) as response:d=json.load(response)
+ except Exception:raise ValueError('Cannot reach local Ollama. Open Ollama and check its address; no models were downloaded.') from None
+ ids=[m.get('id') for m in d.get('data',[]) if isinstance(m,dict) and isinstance(m.get('id'),str)]
+ if not ids:raise ValueError('Ollama has no available models. Add a suitable tool-capable model in Ollama, then refresh.')
+ return {'ok':True,'models':ids}
 def handle(a):
  import switch as r
  d=load();op=a.get('op')
+ if op=='profile-models':return ollama_models(a.get('modelsUrl','http://localhost:11434/v1/models'))
+ before=r.inspect()
+ previous_file=FILE.read_bytes() if FILE.exists() else None
  if op=='profiles':return {'ok':True,**d}
  if op=='profile-select':
   if a['id'] not in [p['id'] for p in d['profiles']]:raise ValueError('Unknown profile.')
@@ -42,7 +56,18 @@ def handle(a):
    if u.scheme!='https' and not (u.scheme=='http' and u.hostname in ['localhost','127.0.0.1','::1']):raise ValueError('Use HTTPS or localhost for the model discovery URL.')
    if u.username or u.password or u.query or u.fragment:raise ValueError('Model discovery URL must not contain credentials.')
    p['modelsUrl']=a['modelsUrl']
-  if p['auth']=='helper':
+  if p['kind']=='Ollama':
+   if not all(local_url(p[k]) for k in ('claudeUrl','codexUrl')) or (p.get('modelsUrl') and not local_url(p['modelsUrl'])):raise ValueError('The Ollama preset supports localhost only. Use a Custom profile with authentication for a remote gateway.')
+   if p['auth']!='local':raise ValueError('Local Ollama uses its non-secret placeholder credential.')
+   model=a.get('claudeModel','').strip()
+   if not model or len(model)>200 or any(c.isspace() for c in model):raise ValueError('Choose an exact Ollama model ID.')
+   p['claudeModel']=model
+  hp_before=Path(helper(p));old_helper=hp_before.read_bytes() if hp_before.exists() and p['auth']!='helper' else None
+  old_helper_mode=hp_before.stat().st_mode & 0o777 if hp_before.exists() else 0o700
+  if p['auth']=='local':
+   if p['kind']!='Ollama':raise ValueError('Local placeholder credentials are only supported for localhost Ollama.')
+   ROOT.mkdir(parents=True,exist_ok=True);hp=Path(helper(p));r.write_atomic(hp,"#!/bin/sh\nprintf %s ollama\n");hp.chmod(0o700)
+  elif p['auth']=='helper':
    h=Path(a['helper']).expanduser()
    if not h.is_absolute() or not h.is_file() or not os.access(h,os.X_OK):raise ValueError('Choose an executable credential helper using its absolute path.')
    p['helper']=str(h)
@@ -61,7 +86,28 @@ def handle(a):
   d['profiles']=[x for x in d['profiles'] if x['id']!=ident]+[p];d['selected']=ident
  else:raise ValueError('Unknown profile operation.')
  ROOT.mkdir(parents=True,exist_ok=True);r.back_up([FILE]);r.write_atomic(FILE,r.dump_json(d))
- return {'ok':True,**d,'message':'Profile selected. Use Connections → Apply changes to change client routing. Saving a profile does not contact or install a proxy.'}
+ reload_targets=[];applied=None
+ if a.get('applyActive') is True and op=='profile-save':
+  import codex_switch as c
+  cs=c.status();active=before['desktop_gateway'] or before['code_gateway'] or cs['codex_gateway']
+  if active:
+   try:
+    importlib.reload(r);importlib.reload(c)
+    import apply_bundle as bundle;importlib.reload(bundle)
+    model=p.get('claudeModel') or cs.get('codex_model','')
+    if cs['codex_gateway']:
+     if model not in c.models()['models']:raise ValueError('Select a model supported by this gateway before applying the active Codex route.')
+    applied=bundle.apply(before['desktop_gateway'],before['code_gateway'],cs['codex_gateway'],model)
+    if before['desktop_gateway']:reload_targets.append('desktop')
+    if cs['codex_gateway']:reload_targets.append('codex')
+   except Exception:
+    if p['auth']!='helper':
+     if old_helper is None:hp_before.unlink(missing_ok=True)
+     else:r.write_atomic(hp_before,old_helper.decode());hp_before.chmod(old_helper_mode)
+    if previous_file is None:FILE.unlink(missing_ok=True)
+    else:r.write_atomic(FILE,previous_file.decode())
+    raise
+ return {'ok':True,**d,'reloadTargets':reload_targets,'applied':applied,'message':('Profile saved and applied to enabled clients. Review the restart prompt.' if applied else 'Profile selected. Use Connections → Apply changes to change client routing. Saving does not install a proxy.')}
 if __name__=='__main__':
  try:print(json.dumps(handle(json.load(sys.stdin))))
  except Exception as e:print(json.dumps({'ok':False,'error':str(e)}));sys.exit(1)

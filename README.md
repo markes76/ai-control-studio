@@ -21,7 +21,7 @@ Explore the [illustrated settings guide](docs/SETTINGS.md) for all six sections,
 ## Features
 
 - **Connections:** switch Claude Desktop, Claude Code and Codex independently between a configured gateway and their normal provider. Consumer ChatGPT gateway routing is unavailable.
-- **Gateway profiles:** named custom, LiteLLM and Bifrost endpoints with Keychain, environment or executable-helper credential references.
+- **Gateway profiles:** named custom, LiteLLM, Bifrost and local Ollama endpoints with Keychain, environment or executable-helper credential references.
 - **MCP Catalog:** searchable public connector metadata, prerequisite guides and local package review before registration. Registration is separate from authentication.
 - **Code Studio:** inspect and edit local agents, skills, commands, plugins and hooks. Import skills from public GitHub sources after file review.
 - **Mods → Jev:** OpenRouter model and credential settings, optional skill suggestions, Tavily discovery fallback, approval-based decision assistance and recent activity.
@@ -37,6 +37,10 @@ open "dist/AI Control Studio.app"
 ```
 
 The build records your Python runtime location in the local app bundle. Build outputs are ignored by Git. A locally built app is not signed or notarized; prebuilt distribution is not provided yet.
+
+## Local Ollama
+
+Open **Gateway profiles → Gateway profile → Ollama**, load available models, choose a tool-capable model and save. The localhost endpoints and non-secret credential placeholder are prefilled. Saving can update already enabled gateway clients and offer a normal quit/reopen; terminal clients need a fresh session. Use **Connections** to enable additional clients. The app does not install Ollama or download models. See the [settings guide](docs/SETTINGS.md#local-ollama).
 
 ## Configure Jev through OpenRouter
 

@@ -114,7 +114,9 @@ final class SidebarButton:NSButton {
         title.draw(at:NSPoint(x:47,y:bounds.midY-size.height/2),withAttributes:attrs)
         if let source=image,let icon=source.copy() as? NSImage {
             icon.lockFocus();color.set();NSRect(origin:.zero,size:icon.size).fill(using:.sourceAtop);icon.unlockFocus()
-            icon.draw(in:NSRect(x:18,y:bounds.midY-10,width:20,height:20),from:.zero,operation:.sourceOver,fraction:1)
+            let scale=min(22/max(icon.size.width,1),22/max(icon.size.height,1))
+            let w=icon.size.width*scale,h=icon.size.height*scale
+            icon.draw(in:NSRect(x:29-w/2,y:bounds.midY-h/2,width:w,height:h),from:.zero,operation:.sourceOver,fraction:1)
         }
         if window?.firstResponder === self {let ring=NSBezierPath(roundedRect:bounds.insetBy(dx:1,dy:3),xRadius:10,yRadius:10);NSGraphicsContext.saveGraphicsState();NSFocusRingPlacement.only.set();ring.fill();NSGraphicsContext.restoreGraphicsState()}
     }
