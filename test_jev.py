@@ -3,6 +3,14 @@ from pathlib import Path
 from unittest.mock import patch
 import jev, switch
 class JevTests(unittest.TestCase):
+ def test_clear_activity_persists_and_preserves_configuration(self):
+  config=Path(self.tmp.name)/'config.json';config.write_text('{"model":"example","secretRef":"example"}')
+  jev.STATUS.write_text('[{"operation":"Connection test"}]')
+  with patch.object(jev,'CONFIG',config):
+   result=jev.handle({'op':'jev-clear-activity'})
+  self.assertTrue(result['ok'])
+  self.assertEqual(json.loads(jev.STATUS.read_text()),[])
+  self.assertEqual(json.loads(config.read_text()),{'model':'example','secretRef':'example'})
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
   self.statusPatch=patch.object(jev,"STATUS",Path(self.tmp.name)/"status.json");self.statusPatch.start();self.addCleanup(self.statusPatch.stop)

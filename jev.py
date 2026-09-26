@@ -173,6 +173,11 @@ def save(a):
  return {'ok':True,'message':'Jev configuration saved. Start a new Claude Code session. Restart Claude Desktop to load the local MCP.','config':config()}
 
 def handle(a):
+ if a['op']=='jev-clear-activity':
+  import switch as r
+  STATUS.parent.mkdir(parents=True,exist_ok=True)
+  r.write_atomic(STATUS,r.dump_json([]))
+  return {'ok':True,'message':'Recent Jev activity cleared. Settings and credentials are unchanged.'}
  if a['op']=='jev-connection-test':return test_connection()
  if a['op']=='jev-save':return save(a)
  if a['op']=='jev-search':return {'ok':True,'discovery':tavily_skills.search(a.get('topic','general'))}

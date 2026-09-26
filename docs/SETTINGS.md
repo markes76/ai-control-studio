@@ -93,6 +93,8 @@ Displays the sessions reported by the supported Claude Code session command. Ref
 
 ## Mods → Jev
 
+Public skill results appear as compact source cards with expandable excerpts and a review/import action. Recent activity scrolls within a fixed-height panel; Clear activity removes only the stored recent checks, preserving settings and credentials.
+
 ![OpenRouter configuration](screenshots/mods-jev.png)
 
 Jev is optional and uses OpenRouter independently of the main conversation gateway. Set its model ID, choose a credential source and select a named Keychain reference. Add/replace key opens a native secure entry dialog. Test OpenRouter connection sends a synthetic decision request and may consume provider usage.
