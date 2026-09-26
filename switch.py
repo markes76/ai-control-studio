@@ -123,9 +123,9 @@ def apply(desktop_on, code_on):
         if not any(x.get("id")==GATEWAY_PROFILE_ID for x in entries):entries.append({"id":GATEWAY_PROFILE_ID,"name":ACTIVE_GATEWAY["name"]})
         original_path=STATE_ROOT/"original-desktop-inference.json"
         if ACTIVE_GATEWAY["id"] != "existing":
-            if not original_path.exists():write_atomic(original_path,dump_json({k:v for k,v in profile.items() if k.startswith("inference")}))
+            if not original_path.exists():write_atomic(original_path,dump_json({k:v for k,v in profile.items() if k.startswith("inference") or k=="modelDiscoveryEnabled"}))
             for k in list(profile):
-                if k.startswith("inference") and k not in ("inferenceGatewayBaseUrl","inferenceProvider"):profile.pop(k)
+                if (k.startswith("inference") or k=="modelDiscoveryEnabled") and k not in ("inferenceGatewayBaseUrl","inferenceProvider"):profile.pop(k)
             profile["inferenceCredentialKind"]="static"
             profile["inferenceCredentialHelper"]=str(HELPER)
             profile["inferenceCredentialHelperTtlSec"]=300
@@ -133,11 +133,13 @@ def apply(desktop_on, code_on):
             if ACTIVE_GATEWAY.get('kind')=='Ollama':
                 # Local Ollama ignores this documented, non-secret API credential.
                 profile['inferenceGatewayApiKey']='ollama'
+                profile['inferenceModels']=[ACTIVE_GATEWAY['claudeModel']]
+                profile['modelDiscoveryEnabled']=False
                 profile.pop('inferenceCredentialHelper',None)
                 profile.pop('inferenceCredentialHelperTtlSec',None)
         elif original_path.exists():
             for k in list(profile):
-                if k.startswith("inference"):profile.pop(k)
+                if k.startswith("inference") or k=="modelDiscoveryEnabled":profile.pop(k)
             profile.update(read_json(original_path))
         profile["deploymentDisplayName"] = ACTIVE_GATEWAY["name"]
         profile["inferenceGatewayBaseUrl"] = GATEWAY_URL

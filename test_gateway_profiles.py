@@ -43,6 +43,7 @@ r.apply(True,True)
 profile=json.loads(r.GATEWAY_PROFILE.read_text())
 assert profile['inferenceCredentialKind']=='static' and profile['inferenceGatewayApiKey']=='ollama'
 assert 'inferenceCredentialHelper' not in profile
+assert profile['inferenceModels']==['test:latest'] and profile['modelDiscoveryEnabled'] is False
 v=gp.handle({'op':'profile-save','name':'Ollama edited','kind':'Ollama','claudeUrl':'http://localhost:11434','codexUrl':'http://localhost:11434/v1','auth':'local','claudeModel':'test:latest','applyActive':True})
 assert v['reloadTargets']==['desktop']
 assert v['applied']['code_gateway']
