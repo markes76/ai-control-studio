@@ -2,6 +2,22 @@
 
 An open-source native macOS workspace for AI gateways, MCPs, Claude Code configuration and optional Jev decision assistance. Built with AppKit, WebKit and Python's standard library.
 
+## Screenshots and settings
+
+![AI Control Studio Connections](docs/screenshots/connections.png)
+
+Explore the [illustrated settings guide](docs/SETTINGS.md) for all six sections, credential setup, MCP prerequisites, Markdown editing and Jev controls. Screenshots use a public-safe demo profile, not live user accounts.
+
+| MCP Catalog | Code Studio |
+| --- | --- |
+| ![MCP Catalog](docs/screenshots/mcp-catalog.png) | ![Code Studio](docs/screenshots/code-studio.png) |
+
+| Gateway profiles | Mods → Jev |
+| --- | --- |
+| ![Gateway profiles](docs/screenshots/gateway-profiles.png) | ![Jev settings](docs/screenshots/mods-jev.png) |
+
+![Secret Manager](docs/screenshots/secret-manager.png)
+
 ## Features
 
 - **Connections:** switch Claude Desktop, Claude Code and Codex independently between a configured gateway and their normal provider. Consumer ChatGPT gateway routing is unavailable.
