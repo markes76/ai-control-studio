@@ -23,5 +23,5 @@ if __name__=='__main__':
   r.STATE_ROOT.mkdir(parents=True,exist_ok=True)
   with (r.STATE_ROOT/'switch.lock').open('a') as one,(r.STATE_ROOT/'codex-switch.lock').open('a') as two:
    fcntl.flock(one,fcntl.LOCK_EX);fcntl.flock(two,fcntl.LOCK_EX)
-   print(json.dumps(apply(sys.argv[1]=='on',sys.argv[2]=='on',sys.argv[3]=='on',sys.argv[4])))
+   print(json.dumps(apply(None if sys.argv[1]=='keep' else sys.argv[1]=='on',sys.argv[2]=='on',sys.argv[3]=='on',sys.argv[4])))
  except Exception as e:print(json.dumps({'ok':False,'error':str(e)}));sys.exit(1)

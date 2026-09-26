@@ -35,11 +35,11 @@ HTTPS is required for remote profiles; localhost HTTP is supported. Finder-launc
 
 ### Local Ollama
 
-Choose **Ollama** to populate `http://localhost:11434` for Claude, `http://localhost:11434/v1` for Codex and `/v1/models` for discovery. Click **Load Ollama models**, choose an exact available model ID, then save. The app does not download models or install/start Ollama. Local Ollama requires no API secret; its credential helper supplies the ignored `ollama` placeholder.
+Choose **Ollama** to populate `http://127.0.0.1:11435` for Claude Desktop, `http://localhost:11434` for Claude Code, `http://localhost:11434/v1` for Codex and `/v1/models` for discovery. Click **Load Ollama models**, choose an exact available model ID, then save. The app does not download models or install/start Ollama. Local Ollama requires no API secret; its credential helper supplies the ignored `ollama` placeholder.
 
-Use tool-capable models and configure sufficient context in Ollama (its coding guides recommend at least 64k). Models tagged `cloud` may use Ollama Cloud and require its sign-in. This preset accepts localhost endpoints only; use an authenticated Custom profile for a remote deployment. Claude Code receives the selected `ANTHROPIC_MODEL`; its previous model setting is restored when leaving Ollama. Desktop uses the local gateway's discovered model list; choose an available model in the client. Model/tool compatibility varies, so registration and routing do not guarantee every agent feature works.
+Use tool-capable models and configure sufficient context in Ollama (its coding guides recommend at least 64k). Models tagged `cloud` may use Ollama Cloud and require its sign-in. This preset accepts localhost endpoints only; use an authenticated Custom profile for a remote deployment. Claude Code receives the selected `ANTHROPIC_MODEL`; its previous model setting is restored when leaving Ollama. Desktop uses Ollama’s dedicated compatibility gateway, not the normal API. Enable Claude in Ollama’s menu-bar app and configure its model mappings there before applying Desktop routing. The app checks the gateway’s official health marker before saving client changes. Model/tool compatibility varies, so registration and routing do not guarantee every agent feature works.
 
-References: [Ollama Claude Code integration](https://docs.ollama.com/integrations/claude-code), [Ollama Codex integration](https://docs.ollama.com/integrations/codex), [API compatibility](https://docs.ollama.com/api/openai-compatibility).
+References: [Ollama Claude Desktop integration](https://docs.ollama.com/integrations/claude-desktop), [Ollama Claude Code integration](https://docs.ollama.com/integrations/claude-code), [Ollama Codex integration](https://docs.ollama.com/integrations/codex), [API compatibility](https://docs.ollama.com/api/openai-compatibility).
 
 ## MCP Catalog
 

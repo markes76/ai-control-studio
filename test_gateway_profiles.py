@@ -28,6 +28,13 @@ class OllamaProfilesTests(unittest.TestCase):
   req=self.request();req['claudeModel']=''
   with patch('switch.inspect',return_value={}):
    with self.assertRaisesRegex(ValueError,'exact Ollama model'):gp.handle(req)
+ def test_desktop_requires_official_gateway_health_marker(self):
+  from unittest.mock import MagicMock
+  response=MagicMock();response.__enter__.return_value=response;response.status=200;response.headers={}
+  with patch('gateway_profiles.urllib.request.urlopen',return_value=response):
+   with self.assertRaisesRegex(ValueError,'11435'):gp.check_desktop_gateway('http://localhost:11434')
+  response.status=204;response.headers={'X-Ollama-Claude-Gateway':'1'}
+  with patch('gateway_profiles.urllib.request.urlopen',return_value=response):gp.check_desktop_gateway('http://127.0.0.1:11435')
  def test_discovery_refuses_remote_url(self):
   with self.assertRaises(ValueError):gp.ollama_models('https://example.com/v1/models')
 class RoutingRoundTripTests(unittest.TestCase):
@@ -39,12 +46,14 @@ r.CODE_SETTINGS.parent.mkdir(parents=True)
 r.CODE_SETTINGS.write_text(json.dumps({'env':{'ANTHROPIC_MODEL':'previous'},'permissions':{'allow':[]}}))
 gp.handle({'op':'profile-save','name':'Ollama','kind':'Ollama','claudeUrl':'http://localhost:11434','codexUrl':'http://localhost:11434/v1','auth':'local','claudeModel':'test:latest'})
 importlib.reload(r);importlib.reload(c)
-r.apply(True,True)
+from unittest.mock import patch
+with patch('gateway_profiles.check_desktop_gateway'):
+ r.apply(True,True)
 profile=json.loads(r.GATEWAY_PROFILE.read_text())
-assert profile['inferenceCredentialKind']=='static' and profile['inferenceGatewayApiKey']=='ollama'
-assert 'inferenceCredentialHelper' not in profile
-assert profile['inferenceModels']==['test:latest'] and profile['modelDiscoveryEnabled'] is False
-v=gp.handle({'op':'profile-save','name':'Ollama edited','kind':'Ollama','claudeUrl':'http://localhost:11434','codexUrl':'http://localhost:11434/v1','auth':'local','claudeModel':'test:latest','applyActive':True})
+assert profile['inferenceGatewayApiKey']=='ollama'
+assert profile['modelDiscoveryEnabled'] is True
+with patch('gateway_profiles.check_desktop_gateway'):
+ v=gp.handle({'op':'profile-save','name':'Ollama edited','kind':'Ollama','claudeUrl':'http://localhost:11434','codexUrl':'http://localhost:11434/v1','auth':'local','claudeModel':'test:latest','applyActive':True})
 assert v['reloadTargets']==['desktop']
 assert v['applied']['code_gateway']
 c.apply(True,'test:latest')

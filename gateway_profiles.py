@@ -29,6 +29,12 @@ def ollama_models(url):
  ids=[m.get('id') for m in d.get('data',[]) if isinstance(m,dict) and isinstance(m.get('id'),str)]
  if not ids:raise ValueError('Ollama has no available models. Add a suitable tool-capable model in Ollama, then refresh.')
  return {'ok':True,'models':ids}
+def check_desktop_gateway(url):
+ if not local_url(url):raise ValueError('Ollama Desktop gateway must be local.')
+ try:
+  with urllib.request.urlopen(url.rstrip('/')+'/_ollama/health',timeout=5) as response:
+   if response.status!=204 or response.headers.get('X-Ollama-Claude-Gateway')!='1':raise ValueError()
+ except Exception:raise ValueError('Enable Claude in the Ollama menu-bar app first. Its Desktop gateway normally runs on 127.0.0.1:11435; the normal API on 11434 cannot replace it.') from None
 def handle(a):
  import switch as r
  d=load();op=a.get('op')
@@ -61,6 +67,9 @@ def handle(a):
    if p['auth']!='local':raise ValueError('Local Ollama uses its non-secret placeholder credential.')
    model=a.get('claudeModel','').strip()
    if not model or len(model)>200 or any(c.isspace() for c in model):raise ValueError('Choose an exact Ollama model ID.')
+   code_url=a.get('claudeCodeUrl') or p['codexUrl'].removesuffix('/v1')
+   if not local_url(code_url):raise ValueError('Ollama Claude Code endpoint must be localhost.')
+   p['claudeCodeUrl']=code_url.rstrip('/')
    p['claudeModel']=model
   hp_before=ROOT/('credential-'+p['id']+'.sh');old_helper=hp_before.read_bytes() if hp_before.exists() and p['auth']!='helper' else None
   old_helper_mode=hp_before.stat().st_mode & 0o777 if hp_before.exists() else 0o700
@@ -97,8 +106,9 @@ def handle(a):
     model=p.get('claudeModel') or cs.get('codex_model','')
     if cs['codex_gateway']:
      if model not in c.models()['models']:raise ValueError('Select a model supported by this gateway before applying the active Codex route.')
-    applied=bundle.apply(before['desktop_gateway'],before['code_gateway'],cs['codex_gateway'],model)
-    if before['desktop_gateway']:reload_targets.append('desktop')
+    desktop_choice=before['desktop_gateway'] if before['desktop_gateway'] or before.get('desktop_mode')=='1p' else None
+    applied=bundle.apply(desktop_choice,before['code_gateway'],cs['codex_gateway'],model)
+    if desktop_choice is True:reload_targets.append('desktop')
     if cs['codex_gateway']:reload_targets.append('codex')
    except Exception:
     if p['auth']!='helper':

@@ -34,6 +34,7 @@ STATE_ROOT = HOME / "Library" / "Application Support" / "AI Control Studio"
 import gateway_profiles as gp
 ACTIVE_GATEWAY = gp.selected() or {"id":"unconfigured","name":"No gateway configured","claudeUrl":"","codexUrl":"","auth":"helper","helper":str(HELPER)}
 GATEWAY_URL = ACTIVE_GATEWAY["claudeUrl"]
+CODE_GATEWAY_URL = ACTIVE_GATEWAY.get("claudeCodeUrl",GATEWAY_URL)
 HELPER = Path(gp.helper(ACTIVE_GATEWAY))
 OLD_EXPORT = f'export ANTHROPIC_BASE_URL="{GATEWAY_URL}"'
 
@@ -76,7 +77,7 @@ def inspect():
     if not isinstance(env, dict):
         raise ValueError("Claude Code settings.env is not an object")
     desktop_gateway = bool(GATEWAY_URL) and desktop.get("deploymentMode") != "1p" and meta.get("appliedId") == GATEWAY_PROFILE_ID and profile.get("inferenceGatewayBaseUrl")==GATEWAY_URL
-    code_gateway = bool(GATEWAY_URL) and env.get("ANTHROPIC_BASE_URL") == GATEWAY_URL and code.get("apiKeyHelper") == str(HELPER)
+    code_gateway = bool(GATEWAY_URL) and env.get("ANTHROPIC_BASE_URL") == CODE_GATEWAY_URL and code.get("apiKeyHelper") == str(HELPER)
     return {
         "desktop_gateway": desktop_gateway,
         "code_gateway": code_gateway,
@@ -84,6 +85,7 @@ def inspect():
         "desktop_profile": meta.get("appliedId"),
         "desktop_label": profile.get("deploymentDisplayName"),
         "gateway_name": ACTIVE_GATEWAY["name"],
+        "gateway_kind": ACTIVE_GATEWAY.get("kind","Custom"),
         "old_shell_export": ZSHRC.exists() and OLD_EXPORT in ZSHRC.read_text(),
     }
 
@@ -103,6 +105,7 @@ def back_up(paths):
 
 def apply(desktop_on, code_on):
     before = inspect()
+    if desktop_on is True and ACTIVE_GATEWAY.get('kind')=='Ollama':gp.check_desktop_gateway(ACTIVE_GATEWAY['claudeUrl'])
     if (desktop_on or code_on) and ACTIVE_GATEWAY["id"]=="unconfigured":raise ValueError("Add and select a gateway in Gateway profiles first.")
     STATE_ROOT.mkdir(parents=True,exist_ok=True)
     if code_on and not HELPER.is_file():
@@ -133,8 +136,8 @@ def apply(desktop_on, code_on):
             if ACTIVE_GATEWAY.get('kind')=='Ollama':
                 # Local Ollama ignores this documented, non-secret API credential.
                 profile['inferenceGatewayApiKey']='ollama'
-                profile['inferenceModels']=[ACTIVE_GATEWAY['claudeModel']]
-                profile['modelDiscoveryEnabled']=False
+                profile.pop('inferenceModels',None)
+                profile['modelDiscoveryEnabled']=True
                 profile.pop('inferenceCredentialHelper',None)
                 profile.pop('inferenceCredentialHelperTtlSec',None)
         elif original_path.exists():
@@ -143,7 +146,7 @@ def apply(desktop_on, code_on):
             profile.update(read_json(original_path))
         profile["deploymentDisplayName"] = ACTIVE_GATEWAY["name"]
         profile["inferenceGatewayBaseUrl"] = GATEWAY_URL
-    else:
+    elif desktop_on is False:
         desktop["deploymentMode"] = "1p"
 
     model_state=STATE_ROOT/'original-code-model.json'
@@ -161,11 +164,11 @@ def apply(desktop_on, code_on):
             raise ValueError("Claude Code settings contain another gateway credential; remove that conflict first")
         env.pop("ANTHROPIC_API_KEY", None)
         env.pop("ANTHROPIC_AUTH_TOKEN", None)
-        env["ANTHROPIC_BASE_URL"] = GATEWAY_URL
+        env["ANTHROPIC_BASE_URL"] = CODE_GATEWAY_URL
         env["CLAUDE_CODE_API_KEY_HELPER_TTL_MS"] = "300000"
         code["apiKeyHelper"] = str(HELPER)
     else:
-        if env.get("ANTHROPIC_BASE_URL") in [p["claudeUrl"] for p in gp.load()["profiles"]]:
+        if env.get("ANTHROPIC_BASE_URL") in [p.get("claudeCodeUrl",p["claudeUrl"]) for p in gp.load()["profiles"]]:
             env.pop("ANTHROPIC_BASE_URL")
         if env.get("CLAUDE_CODE_API_KEY_HELPER_TTL_MS") in ("300000", "3600000"):
             env.pop("CLAUDE_CODE_API_KEY_HELPER_TTL_MS")
@@ -187,6 +190,7 @@ def apply(desktop_on, code_on):
         (CODE_SETTINGS, dump_json(code)),
         (ZSHRC, new_shell),
     ):
+        if desktop_on is None and path in (DESKTOP_SETTINGS,PROFILE_META,GATEWAY_PROFILE):continue
         if new_text is not None and (not path.exists() or path.read_text() != new_text):
             changes.append((path, new_text))
     backup = None

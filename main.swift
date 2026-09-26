@@ -152,10 +152,11 @@ final class SwitchApp: NSObject, NSApplicationDelegate {
     private func updateStatus(_ state: [String: Any]) {
         let desktop = (state["desktop_gateway"] as? Bool) == true
         let code = (state["code_gateway"] as? Bool) == true
+        desktopBox.isEnabled = true
         desktopBox.state = desktop ? .on : .off
         codeBox.state = code ? .on : .off
         let name=state["gateway_name"] as? String ?? "Gateway"
-        statusLabel.stringValue = "Selected: \(name) · Desktop \(desktop ? "proxy" : "direct") · Code \(code ? "proxy" : "direct") · Codex \(codexWasOn ? "proxy" : "previous provider")"
+        statusLabel.stringValue = "Selected: \(name) · Desktop \(desktop ? "proxy" : (state["desktop_mode"] as? String == "3p" ? "other gateway" : "direct")) · Code \(code ? "proxy" : "direct") · Codex \(codexWasOn ? "proxy" : "previous provider")"
     }
 
     private func refreshStatus() {
