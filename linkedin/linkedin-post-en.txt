@@ -1,0 +1,24 @@
+Your AI workspace needs a control panel. Not another collection of config files. 🕹️
+
+I built AI Control Studio — an open-source Mac app that brings models, connections and tools into one interface, with a little pixel-art personality.
+
+What can you manage?
+
+🔌 Connections: choose a gateway independently for Claude Desktop, Claude Code and Codex, with profiles for local Ollama, LiteLLM, Bifrost and custom gateways.
+
+🧩 MCPs and skills: a searchable catalog with connection and permission prerequisites, plus skill discovery and import from GitHub and public URLs — download and review before installing.
+
+🛠️ Your workspace: manage agents, skills, plugins and hooks, and edit instructions that save as Markdown.
+
+⚡ JEV through OpenRouter: skill suggestions and on-demand decision assistance, with approval before every decision request. When no installed skill fits, optional Tavily discovery finds public sources to review before importing.
+
+🔐 Credentials in macOS Keychain, and an offer to restart affected apps after configuration changes.
+
+The interface keeps configuration, skill discovery and activity separate. Search results are readable, and recent activity is paginated and clearable.
+
+Less JSON editing and environment-variable juggling. More control over your AI workspace.
+
+Open for use, feedback and contributions. What would you want to manage from here?
+https://github.com/markes76/ai-control-studio
+
+#AIControlStudio #OpenSource #JEV #OpenRouter #ClaudeCode #Codex #MCP #Ollama #AgenticAI #DeveloperTools #AI #macOS
