@@ -1,0 +1,2640 @@
+{
+  "checkedAt": "2026-09-26T11:15:39.646092+00:00",
+  "entries": [
+    {
+      "id": "connector.ant.dir.ant.anthropic.filesystem",
+      "title": "Filesystem",
+      "slug": "filesystem",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.ant.anthropic.filesystem",
+      "checkedAt": "2026-09-26T11:15:17.939012+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.ant.anthropic.chrome-control",
+      "title": "Control Chrome",
+      "slug": "control-chrome",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.ant.anthropic.chrome-control",
+      "checkedAt": "2026-09-26T11:15:17.939333+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.gh.anthropic.pdf-server-mcp",
+      "title": "pdf-viewer",
+      "slug": "pdf-viewer-5f8ba9",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.anthropic.pdf-server-mcp",
+      "checkedAt": "2026-09-26T11:15:17.939346+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/anthropic/pdf-server-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.apify.apify-mcp-server",
+      "title": "Apify",
+      "slug": "apify",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.apify.apify-mcp-server",
+      "checkedAt": "2026-09-26T11:15:17.939562+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/apify/apify-mcp-server/master/README.md",
+        "https://github.com/apify/apify-mcp-server/releases/tag/v0.16.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/apify/apify-mcp-server/releases/latest/download/apify-mcp-server.mcpb",
+          "evidence": "https://raw.githubusercontent.com/apify/apify-mcp-server/master/README.md",
+          "name": "apify-mcp-server.mcpb"
+        },
+        {
+          "url": "https://github.com/apify/apify-mcp-server/releases/download/v0.16.0/apify-mcp-server.mcpb",
+          "evidence": "https://github.com/apify/apify-mcp-server/releases/expanded_assets/v0.16.0",
+          "name": "apify-mcp-server.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/apify/apify-mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.ant.anthropic.ms_office_powerpoint",
+      "title": "PowerPoint (By Anthropic)",
+      "slug": "powerpoint-by-anthropic",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.ant.anthropic.ms_office_powerpoint",
+      "checkedAt": "2026-09-26T11:15:17.939545+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.ant.anthropic.ms_office_word",
+      "title": "Word (By Anthropic)",
+      "slug": "word-by-anthropic",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.ant.anthropic.ms_office_word",
+      "checkedAt": "2026-09-26T11:15:17.939646+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.gh.wonderwhy-er.desktopcommandermcp",
+      "title": "Desktop Commander",
+      "slug": "desktop-commander",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.wonderwhy-er.desktopcommandermcp",
+      "checkedAt": "2026-09-26T11:15:17.939658+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/wonderwhy-er/desktopcommandermcp/main/README.md",
+        "https://github.com/wonderwhy-er/desktopcommandermcp/releases/tag/v0.2.51"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP/releases/download/v0.2.51/desktop-commander-0.2.51.mcpb",
+          "evidence": "https://github.com/wonderwhy-er/desktopcommandermcp/releases/expanded_assets/v0.2.51",
+          "name": "desktop-commander-0.2.51.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"desktop-commander\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@wonderwhy-er/desktop-commander@latest\"\n      ]\n    }\n  }\n}\n",
+        "Add this to your client's MCP configuration file at the locations below:\n\n<details>\n<summary><b>Cursor</b></summary><br>\n\n[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=desktop-commander&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB3b25kZXJ3aHktZXIvZGVza3RvcC1jb21tYW5kZXJAbGF0ZXN0Il19)\n\n[View MCP Server in Directory](https://cursor.directory/mcp/desktop-commander-mcp)\n\nOr add manually to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` in your project folder (project-specific).\n\nSee [Cursor MCP docs](https://docs.cursor.com/context/model-context-protocol) for more info.\n\n</details>\n\n<details>\n<summary><b>Windsurf</b></summary>\n\nAdd to `~/.codeium/windsurf/mcp_config.json`. See [Windsurf MCP docs](https://docs.windsurf.com/windsurf/cascade/mcp) for more info.\n\n</details>\n\n<details>\n<summary><b>VS Code / GitHub Copilot</b></summary>\n\nAdd to `.vscode/mcp.json` in your project or VS Code User Settings (JSON). Make sure MCP is enabled under Chat > MCP. Works in Agent mode.\n\nSee [VS Code MCP docs](https://code.visualstudio.com/docs/copilot/chat/mcp-servers) for more info.\n\n</details>\n\n<details>\n<summary><b>Cline</b></summary>\n\nConfigure through the Cline extension settings in VS Code. Open the Cline sidebar, click the MCP Servers icon, and add the JSON configuration above. See [Cline MCP docs](https://docs.cline.bot/mcp/configuring-mcp-servers) for more info.\n\n</details>\n\n<details>\n<summary><b>Roo Code</b></summary>\n\nAdd to your Roo Code MCP configuration file. See [Roo Code MCP docs](https://docs.roocode.com/features/mcp/using-mcp-in-roo) for more info.\n\n</details>\n\n<details>\n<summary><b>Claude Code</b></summary>\n\n",
+        "This automatic uninstaller will:\n- \u2705 Remove Desktop Commander from Claude's MCP server configuration\n- \u2705 Create a backup of your Claude config before making changes\n- \u2705 Provide guidance for complete package removal\n- \u2705 Restore from backup if anything goes wrong\n\n#### \ud83d\udd27 Manual Uninstallation\n\nIf the automatic uninstaller doesn't work or you prefer manual removal:\n\n##### Remove from Claude Configuration\n\n1. **Locate your Claude Desktop config file:**\n  - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`\n  - **Windows:** `%APPDATA%\\Claude\\claude_desktop_config.json`\n  - **Linux:** `~/.config/Claude/claude_desktop_config.json`\n\n2. **Edit the config file:**\n  - Open the file in a text editor\n  - Find and remove the `\"desktop-commander\"` entry from the `\"mcpServers\"` section\n  - Save the file\n\n  **Example - Remove this section:**\n  "
+      ],
+      "errors": [],
+      "repository": "https://github.com/wonderwhy-er/desktopcommandermcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.cursortouch.windows-mcp",
+      "title": "Windows-MCP",
+      "slug": "windows-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.cursortouch.windows-mcp",
+      "checkedAt": "2026-09-26T11:15:17.939803+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.gh.silverstein.pdf-filler-simple",
+      "title": "PDF Tools",
+      "slug": "pdf-tools",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.silverstein.pdf-filler-simple",
+      "checkedAt": "2026-09-26T11:15:17.939760+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/silverstein/pdf-filler-simple/master/README.md",
+        "https://github.com/Open-Document-Alliance/PDF-Tools/releases/tag/v0.14.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/Open-Document-Alliance/PDF-Tools/releases/download/v0.14.0/pdf-toolkit-mcp.mcpb",
+          "evidence": "https://github.com/Open-Document-Alliance/PDF-Tools/releases/expanded_assets/v0.14.0",
+          "name": "pdf-toolkit-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"pdf-tools\": {\n      \"command\": \"node\",\n      \"args\": [\"/full/path/to/PDF-Tools/server/index.js\"]\n    }\n  }\n}\n"
+      ],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/silverstein/pdf-filler-simple",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.flux159.mcp-server-kubernetes",
+      "title": "Kubernetes MCP Server",
+      "slug": "kubernetes-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.flux159.mcp-server-kubernetes",
+      "checkedAt": "2026-09-26T11:15:17.939887+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/flux159/mcp-server-kubernetes/main/README.md",
+        "https://github.com/flux159/mcp-server-kubernetes/releases/tag/v4.1.7"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/Flux159/mcp-server-kubernetes/releases/download/v4.1.7/mcp-server-kubernetes.mcpb",
+          "evidence": "https://github.com/flux159/mcp-server-kubernetes/releases/expanded_assets/v4.1.7",
+          "name": "mcp-server-kubernetes.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/flux159/mcp-server-kubernetes",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.tableau.tableau-mcp",
+      "title": "Tableau",
+      "slug": "tableau",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.tableau.tableau-mcp",
+      "checkedAt": "2026-09-26T11:15:17.939850+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/tableau/tableau-mcp/main/README.md",
+        "https://github.com/tableau/tableau-mcp/releases/tag/v4.13.3"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/tableau/tableau-mcp/releases/download/v4.13.3/tableau-mcp-v4.13.3.mcpb",
+          "evidence": "https://github.com/tableau/tableau-mcp/releases/expanded_assets/v4.13.3",
+          "name": "tableau-mcp-v4.13.3.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"tableau\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@tableau/mcp-server@latest\"],\n      \"env\": {\n        \"SERVER\": \"https://my-tableau-server.com\",\n        \"SITE_NAME\": \"my_site\",\n        \"PAT_NAME\": \"my_pat\",\n        \"PAT_VALUE\": \"pat_value\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/tableau/tableau-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.blender.blender-mcp",
+      "title": "Blender",
+      "slug": "blender",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.blender.blender-mcp",
+      "checkedAt": "2026-09-26T11:15:17.939952+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/blender/blender-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.flexibits.fantastical-mcp",
+      "title": "Fantastical",
+      "slug": "fantastical",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.flexibits.fantastical-mcp",
+      "checkedAt": "2026-09-26T11:15:17.940009+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/flexibits/fantastical-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.ant.anthropic.notes",
+      "title": "Read and Write Apple Notes",
+      "slug": "read-and-write-apple-notes",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.ant.anthropic.notes",
+      "checkedAt": "2026-09-26T11:15:18.866567+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.gh.jerichosequitin.metabase",
+      "title": "Metabase (Unofficial \u2014 Community)",
+      "slug": "metabase-unofficial-community",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.jerichosequitin.metabase",
+      "checkedAt": "2026-09-26T11:15:18.866594+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/jerichosequitin/metabase",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.k6l3.osascript",
+      "title": "Control your Mac",
+      "slug": "control-your-mac",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.k6l3.osascript",
+      "checkedAt": "2026-09-26T11:15:18.872558+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/k6l3/osascript",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.autodesk.fusion-mcp",
+      "title": "Autodesk Fusion",
+      "slug": "autodesk-fusion",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.autodesk.fusion-mcp",
+      "checkedAt": "2026-09-26T11:15:19.361152+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/autodesk/fusion-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.mailtrap.mailtrap-mcp",
+      "title": "Mailtrap",
+      "slug": "mailtrap",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.mailtrap.mailtrap-mcp",
+      "checkedAt": "2026-09-26T11:15:19.439141+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/mailtrap/mailtrap-mcp/main/README.md",
+        "https://github.com/mailtrap/mailtrap-mcp/releases/tag/v0.9.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/mailtrap/mailtrap-mcp/releases/download/v0.9.0/mailtrap-mcp.mcpb",
+          "evidence": "https://github.com/mailtrap/mailtrap-mcp/releases/expanded_assets/v0.9.0",
+          "name": "mailtrap-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"mailtrap\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-mailtrap\"],\n      \"env\": {\n        \"MAILTRAP_API_TOKEN\": \"your_mailtrap_api_token\",\n        \"DEFAULT_FROM_EMAIL\": \"your_sender@example.com\",\n        \"MAILTRAP_ACCOUNT_ID\": \"your_account_id\",\n        \"MAILTRAP_TEST_INBOX_ID\": \"your_test_inbox_id\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"mailtrap\": {\n      \"command\": \"/Users/<username>/.asdf/shims/npx\",\n      \"args\": [\"-y\", \"mcp-mailtrap\"],\n      \"env\": {\n        \"PATH\": \"/Users/<username>/.asdf/shims:/usr/bin:/bin\",\n        \"ASDF_DIR\": \"/opt/homebrew/opt/asdf/libexec\",\n        \"ASDF_DATA_DIR\": \"/Users/<username>/.asdf\",\n        \"ASDF_NODEJS_VERSION\": \"20.6.1\",\n        \"MAILTRAP_API_TOKEN\": \"your_mailtrap_api_token\",\n        \"DEFAULT_FROM_EMAIL\": \"your_sender@example.com\",\n        \"MAILTRAP_ACCOUNT_ID\": \"your_account_id\",\n        \"MAILTRAP_TEST_INBOX_ID\": \"your_test_inbox_id\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/mailtrap/mailtrap-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.silverstein.minutes",
+      "title": "Minutes Conversation Memory",
+      "slug": "minutes-conversation-memory",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.silverstein.minutes",
+      "checkedAt": "2026-09-26T11:15:19.443769+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/silverstein/minutes/main/README.md",
+        "https://github.com/silverstein/minutes/releases/tag/v0.27.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/silverstein/minutes/releases/download/v0.27.0/minutes.mcpb",
+          "evidence": "https://github.com/silverstein/minutes/releases/expanded_assets/v0.27.0",
+          "name": "minutes.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/silverstein/minutes",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.agiletortoise.drafts-mcp",
+      "title": "Drafts",
+      "slug": "drafts",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.agiletortoise.drafts-mcp",
+      "checkedAt": "2026-09-26T11:15:19.449542+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/agiletortoise/drafts-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.cursortouch.macos-mcp",
+      "title": "MacOS-MCP",
+      "slug": "macos-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.cursortouch.macos-mcp",
+      "checkedAt": "2026-09-26T11:15:19.778038+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/CursorTouch/MacOS-MCP/main/README.md",
+        "https://github.com/CursorTouch/MacOS-MCP/releases/tag/v0.4.6"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/CursorTouch/MacOS-MCP/releases/download/v0.4.6/macos-mcp-v0.4.6.mcpb",
+          "evidence": "https://github.com/CursorTouch/MacOS-MCP/releases/expanded_assets/v0.4.6",
+          "name": "macos-mcp-v0.4.6.mcpb"
+        }
+      ],
+      "configurations": [
+        "  **3. Restart Claude Desktop.**\n\n  If you have multiple Claude Desktop instances (e.g. Parall clones), add the\n  same `mcpServers` entry to each instance's `claude_desktop_config.json`. All\n  instances will share the single background server.\n\n  A migration script is included for bulk reconfiguration \u2014 see\n  [`scripts/stdio-to-http-reconfig.sh`](scripts/stdio-to-http-reconfig.sh).\n\n  **With authentication** (recommended when binding to `0.0.0.0`):\n\n  "
+      ],
+      "errors": [],
+      "repository": "https://github.com/CursorTouch/MacOS-MCP",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.railsware.couplerio",
+      "title": "Coupler.io",
+      "slug": "coupler-io-578a0a",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.railsware.couplerio",
+      "checkedAt": "2026-09-26T11:15:19.792269+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/railsware/couplerio",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.ant.anthropic.imessage",
+      "title": "Read and Send iMessages",
+      "slug": "read-and-send-imessages",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.ant.anthropic.imessage",
+      "checkedAt": "2026-09-26T11:15:20.246086+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.gh.explorium-ai.agentsource",
+      "title": "Vibe Prospecting",
+      "slug": "vibe-prospecting",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.explorium-ai.agentsource",
+      "checkedAt": "2026-09-26T11:15:20.246110+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/explorium-ai/agentsource",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.socketdev.socket-mcp",
+      "title": "Socket",
+      "slug": "socket",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.socketdev.socket-mcp",
+      "checkedAt": "2026-09-26T11:15:20.321578+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/socketdev/socket-mcp/main/README.md",
+        "https://github.com/socketdev/socket-mcp/releases/tag/v0.2.1"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/socketdev/socket-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.microsoft.mcp-win-x64",
+      "title": "Azure MCP Server",
+      "slug": "azure-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.microsoft.mcp-win-x64",
+      "checkedAt": "2026-09-26T11:15:20.373509+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/microsoft/mcp-win-x64",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.sap.fiori-mcp-server",
+      "title": "SAP Fiori MCP Server",
+      "slug": "sap-fiori-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.sap.fiori-mcp-server",
+      "checkedAt": "2026-09-26T11:15:20.531400+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/sap/fiori-mcp-server",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.tianqitang1.enrichr-mcp-server",
+      "title": "Enrichr MCP Server",
+      "slug": "enrichr-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.tianqitang1.enrichr-mcp-server",
+      "checkedAt": "2026-09-26T11:15:20.739370+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/tianqitang1/enrichr-mcp-server/main/README.md",
+        "https://github.com/tianqitang1/enrichr-mcp-server/releases/tag/v0.4.1"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/tianqitang1/enrichr-mcp-server/releases/download/v0.4.1/enrichr-mcp-server.dxt",
+          "evidence": "https://github.com/tianqitang1/enrichr-mcp-server/releases/expanded_assets/v0.4.1",
+          "name": "enrichr-mcp-server.dxt"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/tianqitang1/enrichr-mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.williamkapke.kapture",
+      "title": "Kapture Browser Automation",
+      "slug": "kapture-browser-automation",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.williamkapke.kapture",
+      "checkedAt": "2026-09-26T11:15:20.764473+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/williamkapke/kapture/master/README.md",
+        "https://github.com/williamkapke/kapture/releases/tag/v1.2.1"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/williamkapke/kapture",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.awslabs.aws-api-mcp-server",
+      "title": "AWS API MCP Server",
+      "slug": "aws-api-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.awslabs.aws-api-mcp-server",
+      "checkedAt": "2026-09-26T11:15:21.029738+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/awslabs/aws-api-mcp-server",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.revolut-engineering.revolut-x-api",
+      "title": "Revolut X",
+      "slug": "revolut-x",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.revolut-engineering.revolut-x-api",
+      "checkedAt": "2026-09-26T11:15:21.153254+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/revolut-engineering/revolut-x-api/master/README.md",
+        "https://github.com/revolut-engineering/revolut-x-api/releases/tag/v1.0.50"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/revolut-engineering/revolut-x-api/releases/download/v1.0.50/revolutx-mcp.mcpb",
+          "evidence": "https://github.com/revolut-engineering/revolut-x-api/releases/expanded_assets/v1.0.50",
+          "name": "revolutx-mcp.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/revolut-engineering/revolut-x-api",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.canva.affinity",
+      "title": "Affinity",
+      "slug": "affinity-106b90",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.canva.affinity",
+      "checkedAt": "2026-09-26T11:15:21.299716+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/canva/affinity",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.microsoft.clarity-mcp-server",
+      "title": "Microsoft Clarity",
+      "slug": "microsoft-clarity",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.microsoft.clarity-mcp-server",
+      "checkedAt": "2026-09-26T11:15:21.302492+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/microsoft/clarity-mcp-server/main/README.md",
+        "https://github.com/microsoft/clarity-mcp-server/releases"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/microsoft/clarity-mcp-server",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.sap.ui5-mcp-server",
+      "title": "SAPUI5 MCP Server",
+      "slug": "sapui5-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.sap.ui5-mcp-server",
+      "checkedAt": "2026-09-26T11:15:21.471667+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/sap/ui5-mcp-server",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.tooluniverse.tooluniverse-mcp",
+      "title": "ToolUniverse",
+      "slug": "tooluniverse",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.tooluniverse.tooluniverse-mcp",
+      "checkedAt": "2026-09-26T11:15:21.884212+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/mims-harvard/ToolUniverse/main/README.md",
+        "https://github.com/mims-harvard/ToolUniverse/releases/tag/v1.5.3"
+      ],
+      "packages": [],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"tooluniverse\": {\n      \"command\": \"uvx\",\n      \"args\": [\"--refresh\", \"tooluniverse\"],\n      \"env\": {\"PYTHONIOENCODING\": \"utf-8\"}\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/mims-harvard/ToolUniverse",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.cloudglue.cloudglue-mcp",
+      "title": "Cloudglue",
+      "slug": "cloudglue",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.cloudglue.cloudglue-mcp",
+      "checkedAt": "2026-09-26T11:15:22.024337+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/cloudglue/cloudglue-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.cloudinary.mcp-servers",
+      "title": "Cloudinary Asset Management",
+      "slug": "cloudinary-asset-management",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.cloudinary.mcp-servers",
+      "checkedAt": "2026-09-26T11:15:22.190898+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/cloudinary/mcp-servers/main/README.md",
+        "https://github.com/cloudinary/mcp-servers/releases"
+      ],
+      "packages": [],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"cloudinary-asset-mgmt-remote\": {\n      \"url\": \"https://asset-management.mcp.cloudinary.com/mcp\"\n    },\n    \"cloudinary-env-config-remote\": {\n      \"url\": \"https://environment-config.mcp.cloudinary.com/mcp\"\n    },\n    \"cloudinary-smd-remote\": {\n      \"url\": \"https://structured-metadata.mcp.cloudinary.com/mcp\"\n    },\n    \"cloudinary-analysis-remote\": {\n      \"url\": \"https://analysis.mcp.cloudinary.com/sse\"\n    },\n    \"mediaflows\": {\n      \"url\": \"https://mediaflows.mcp.cloudinary.com/v2/mcp\"\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"cloudinary-asset-mgmt-remote\": {\n      \"url\": \"https://asset-management.mcp.cloudinary.com/mcp\",\n      \"headers\": {\n        \"cloudinary-url\": \"cloudinary://api_key:api_secret@cloud_name\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"cloudinary-env-config-remote\": {\n      \"url\": \"https://environment-config.mcp.cloudinary.com/mcp\",\n      \"headers\": {\n        \"cloudinary-cloud-name\": \"your_cloud_name\",\n        \"cloudinary-api-key\": \"your_api_key\",\n        \"cloudinary-api-secret\": \"your_api_secret\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"cloudinary-smd-remote\": {\n      \"url\": \"https://structured-metadata.mcp.cloudinary.com/mcp\",\n      \"headers\": {\n        \"cloudinary-url\": \"cloudinary://api_key:api_secret@cloud_name\",\n        \"cloudinary-region\": \"api-eu\",\n        \"cloudinary-tools\": \"list-metadata-fields,get-metadata-field,create-metadata-field\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"cloudinary-asset-mgmt-remote\": {\n      \"url\": \"https://asset-management.mcp.cloudinary.com/mcp\",\n      \"headers\": {\n        \"cloudinary-url\": \"cloudinary://api_key:api_secret@cloud_name\",\n        \"cloudinary-embed-headers\": \"true\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"cloudinary-asset-mgmt\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"--package\", \"@cloudinary/asset-management-mcp\", \"--\", \"mcp\", \"start\"],\n      \"env\": {\n        \"CLOUDINARY_URL\": \"cloudinary://api_key:api_secret@cloud_name\"\n      }\n    },\n    \"cloudinary-env-config\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"--package\", \"@cloudinary/environment-config-mcp\", \"--\", \"mcp\", \"start\"],\n      \"env\": {\n        \"CLOUDINARY_URL\": \"cloudinary://api_key:api_secret@cloud_name\"\n      }\n    },\n    \"cloudinary-smd\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"--package\", \"@cloudinary/structured-metadata-mcp\", \"--\", \"mcp\", \"start\"],\n      \"env\": {\n        \"CLOUDINARY_URL\": \"cloudinary://api_key:api_secret@cloud_name\"\n      }\n    },\n    \"cloudinary-analysis\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"--package\", \"@cloudinary/analysis\", \"--\", \"mcp\", \"start\"],\n      \"env\": {\n        \"CLOUDINARY_URL\": \"cloudinary://api_key:api_secret@cloud_name\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"cloudinary-asset-mgmt\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"--package\", \"@cloudinary/asset-management-mcp\", \"--\", \"mcp\", \"start\"],\n      \"env\": {\n        \"CLOUDINARY_CLOUD_NAME\": \"cloud_name\",\n        \"CLOUDINARY_API_KEY\": \"api_key\",\n        \"CLOUDINARY_API_SECRET\": \"api_secret\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"cloudinary-asset-mgmt\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\", \"--package\", \"@cloudinary/asset-management-mcp\",\n        \"--\",\n        \"mcp\", \"start\",\n        \"--cloud-name\", \"cloud_name\",\n        \"--api-key\", \"api_key\",\n        \"--api-secret\", \"api_secret\"\n      ]\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"mediaflows\": {\n      \"url\": \"https://mediaflows.mcp.cloudinary.com/v2/mcp\",\n      \"headers\": {\n        \"cld-cloud-name\": \"cloud_name\",\n        \"cld-api-key\": \"api_key\",\n        \"cld-secret\": \"api_secret\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/cloudinary/mcp-servers",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.grafana.grafana-mcp",
+      "title": "Grafana MCP Server",
+      "slug": "grafana-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.grafana.grafana-mcp",
+      "checkedAt": "2026-09-26T11:15:22.234807+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/grafana/grafana-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.noteplan.noteplan-mcp",
+      "title": "Noteplan",
+      "slug": "noteplan",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.noteplan.noteplan-mcp",
+      "checkedAt": "2026-09-26T11:15:22.395556+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/noteplan/noteplan-mcp/main/README.md",
+        "https://github.com/noteplan/noteplan-mcp/releases"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/noteplan/noteplan-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.nulab.backlog-mcp-server",
+      "title": "Backlog",
+      "slug": "backlog",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.nulab.backlog-mcp-server",
+      "checkedAt": "2026-09-26T11:15:22.405441+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/nulab/backlog-mcp-server/main/README.md",
+        "https://github.com/nulab/backlog-mcp-server/releases/tag/v0.20.4"
+      ],
+      "packages": [],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"backlog\": {\n      \"command\": \"docker\",\n      \"args\": [\n        \"run\",\n        \"--pull\",\n        \"always\",\n        \"-i\",\n        \"--rm\",\n        \"-e\",\n        \"BACKLOG_DOMAIN\",\n        \"-e\",\n        \"BACKLOG_API_KEY\",\n        \"ghcr.io/nulab/backlog-mcp-server\"\n      ],\n      \"env\": {\n        \"BACKLOG_DOMAIN\": \"your-domain.backlog.com\",\n        \"BACKLOG_API_KEY\": \"your-api-key\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"backlog\": {\n      \"command\": \"npx\",\n      \"args\": [\"backlog-mcp-server\"],\n      \"env\": {\n        \"BACKLOG_DOMAIN\": \"your-domain.backlog.com\",\n        \"BACKLOG_API_KEY\": \"your-api-key\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/nulab/backlog-mcp-server",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.website-generator",
+      "title": "B12 Website Generator",
+      "slug": "b12-website-generator",
+      "directoryUrl": "https://claude.ai/directory/website-generator",
+      "checkedAt": "2026-09-26T11:15:22.511353+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.gh.ableton.ableton-knowledge",
+      "title": "Ableton Knowledge",
+      "slug": "ableton-knowledge",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.ableton.ableton-knowledge",
+      "checkedAt": "2026-09-26T11:15:22.511378+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/ableton/ableton-knowledge",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.jpisnice.shadcn-ui-mcp",
+      "title": "Shadcn UI",
+      "slug": "shadcn-ui",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.jpisnice.shadcn-ui-mcp",
+      "checkedAt": "2026-09-26T11:15:22.983897+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/jpisnice/shadcn-ui-mcp/master/README.md",
+        "https://github.com/Jpisnice/shadcn-ui-mcp-server/releases/tag/v2.0.0"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/jpisnice/shadcn-ui-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.lumin.lumin-mcp",
+      "title": "Lumin",
+      "slug": "lumin-82219f",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.lumin.lumin-mcp",
+      "checkedAt": "2026-09-26T11:15:23.174282+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/lumin/lumin-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.pathmode.pathmode",
+      "title": "Pathmode",
+      "slug": "pathmode",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.pathmode.pathmode",
+      "checkedAt": "2026-09-26T11:15:23.193317+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/pathmode/pathmode",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.zscaler.zscaler-mcp-server",
+      "title": "Zscaler MCP Server",
+      "slug": "zscaler-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.zscaler.zscaler-mcp-server",
+      "checkedAt": "2026-09-26T11:15:23.312018+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/zscaler/zscaler-mcp-server/main/README.md",
+        "https://github.com/zscaler/zscaler-mcp-server/releases/tag/v0.15.4"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/zscaler/zscaler-mcp-server/releases/download/v0.15.4/zscaler-mcp-server-0.15.4.mcpb",
+          "evidence": "https://github.com/zscaler/zscaler-mcp-server/releases/expanded_assets/v0.15.4",
+          "name": "zscaler-mcp-server-0.15.4.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/zscaler/zscaler-mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.docling-project.docling-mcp",
+      "title": "Docling MCP",
+      "slug": "docling-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.docling-project.docling-mcp",
+      "checkedAt": "2026-09-26T11:15:23.420248+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/docling-project/docling-mcp/main/README.md",
+        "https://github.com/docling-project/docling-mcp/releases/tag/v3.2.1"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/docling-project/docling-mcp/releases/download/v3.2.1/docling-mcp.mcpb",
+          "evidence": "https://github.com/docling-project/docling-mcp/releases/expanded_assets/v3.2.1",
+          "name": "docling-mcp.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/docling-project/docling-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.growthbook.growthbook-mcp",
+      "title": "Growthbook",
+      "slug": "growthbook",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.growthbook.growthbook-mcp",
+      "checkedAt": "2026-09-26T11:15:23.441253+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/growthbook/growthbook-mcp/main/README.md",
+        "https://github.com/growthbook/growthbook-mcp/releases/tag/v2.1.0"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/growthbook/growthbook-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.mlava.scholar-sidekick-mcp",
+      "title": "Scholar Sidekick",
+      "slug": "scholar-sidekick",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.mlava.scholar-sidekick-mcp",
+      "checkedAt": "2026-09-26T11:15:23.473188+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/mlava/scholar-sidekick-mcp/main/README.md",
+        "https://github.com/mlava/scholar-sidekick-mcp/releases/tag/v0.8.11"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/mlava/scholar-sidekick-mcp/releases/download/v0.8.11/scholar-sidekick-mcp.mcpb",
+          "evidence": "https://github.com/mlava/scholar-sidekick-mcp/releases/expanded_assets/v0.8.11",
+          "name": "scholar-sidekick-mcp.mcpb"
+        },
+        {
+          "url": "https://github.com/mlava/scholar-sidekick-mcp/releases/download/v0.8.11/scholar-sidekick-mcp.smithery.mcpb",
+          "evidence": "https://github.com/mlava/scholar-sidekick-mcp/releases/expanded_assets/v0.8.11",
+          "name": "scholar-sidekick-mcp.smithery.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"scholar-sidekick\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"scholar-sidekick-mcp@latest\"]\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/mlava/scholar-sidekick-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.mnemoverse.mcp-memory-server",
+      "title": "MCP Memory",
+      "slug": "mcp-memory",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.mnemoverse.mcp-memory-server",
+      "checkedAt": "2026-09-26T11:15:23.825738+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/mnemoverse/mcp-memory-server/main/README.md",
+        "https://github.com/mnemoverse/mcp-memory-server/releases/tag/v0.12.1"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/mnemoverse/mcp-memory-server/releases/download/v0.12.1/mnemoverse-memory.mcpb",
+          "evidence": "https://github.com/mnemoverse/mcp-memory-server/releases/expanded_assets/v0.12.1",
+          "name": "mnemoverse-memory.mcpb"
+        }
+      ],
+      "configurations": [
+        "<!-- INSTALL_SNIPPETS_END -->\n\n<details>\n<summary><b>All other clients</b> \u2014 VS Code, Windsurf, Zed, JetBrains, Cline, Continue</summary>\n\n<!-- MORE_CLIENTS_START \u2014 generated from src/configs/source.json. Run `npm run generate:configs` to refresh. Do not edit by hand. -->\n\n**VS Code** \u2014 the [VS Code extension](https://github.com/mnemoverse/mnemoverse-vscode) signs in through the browser and needs no key; that's the default path. In VS Code's non-interactive Agent Host mode, servers that prompt for inputs like this one are not started; for unattended use there, put the key in the environment of the process that launches VS Code instead. To wire the MCP server directly instead, add this to `.vscode/mcp.json` (note: VS Code uses `servers`, not `mcpServers`). Never put a literal `mk_live_` key in that file \u2014 it's committed with the repo. The `inputs` entry below prompts for the key instead: VS Code masks what you type and stores it in its own secret storage, not in the file:\n\n",
+        "**Windsurf** \u2014 add to `~/.codeium/windsurf/mcp_config.json`:\n\n",
+        "**Continue** \u2014 add `~/.continue/mcpServers/mnemoverse.yaml` (Continue uses YAML):\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/mnemoverse/mcp-memory-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.readdle.spark-claude-extension",
+      "title": "Spark",
+      "slug": "spark",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.readdle.spark-claude-extension",
+      "checkedAt": "2026-09-26T11:15:24.083816+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/readdle/spark-claude-extension/main/README.md",
+        "https://github.com/readdle/spark-claude-extension/releases/tag/1.3.1"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/readdle/spark-claude-extension/releases/latest/download/Spark.mcpb",
+          "evidence": "https://raw.githubusercontent.com/readdle/spark-claude-extension/main/README.md",
+          "name": "Spark.mcpb"
+        },
+        {
+          "url": "https://github.com/readdle/spark-claude-extension/releases/download/1.3.1/Spark.mcpb",
+          "evidence": "https://github.com/readdle/spark-claude-extension/releases/expanded_assets/1.3.1",
+          "name": "Spark.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/readdle/spark-claude-extension",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.zoho.analytics-mcp-server",
+      "title": "Zoho Analytics",
+      "slug": "zoho-analytics",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.zoho.analytics-mcp-server",
+      "checkedAt": "2026-09-26T11:15:24.133820+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/zoho/analytics-mcp-server/main/README.md",
+        "https://github.com/zoho/analytics-mcp-server/releases/tag/v1.0.4"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/zoho/analytics-mcp-server/releases/download/v1.0.4/zoho-analytics-v-1.0.4.mcpb",
+          "evidence": "https://github.com/zoho/analytics-mcp-server/releases/expanded_assets/v1.0.4",
+          "name": "zoho-analytics-v-1.0.4.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/zoho/analytics-mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.beehiveinnovations.busycal",
+      "title": "BusyCal",
+      "slug": "busycal",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.beehiveinnovations.busycal",
+      "checkedAt": "2026-09-26T11:15:24.776461+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/beehiveinnovations/busycal",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.karp.inspector-mcp",
+      "title": "KARP Inspector Lite",
+      "slug": "karp-inspector-lite",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.karp.inspector-mcp",
+      "checkedAt": "2026-09-26T11:15:25.096931+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/karp/inspector-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.sap.mdk-mcp-server",
+      "title": "SAP MDK MCP Server",
+      "slug": "sap-mdk-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.sap.mdk-mcp-server",
+      "checkedAt": "2026-09-26T11:15:25.146863+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/sap/mdk-mcp-server/main/README.md",
+        "https://github.com/sap/mdk-mcp-server/releases/tag/v0.4.0"
+      ],
+      "packages": [],
+      "configurations": [
+        "3. Configure your MCP client (AI agent) to connect to the server. Note that configuration will vary depending on the AI agent used.\n\n    **Cline in VS Code:** Example using the [Cline extension](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev). \n    \n    - With Cline open, look below the prompt box and click **Manage MCP Servers**.\n    - In the dialog, click **Settings**. The MCP Servers page opens.\n    - Click **Configure MCP Servers**. This will open the `cline_mcp_settings.json` file in your editor.\n    - In the JSON settings file, add a configuration block for MDK MCP server within the `mcpServers` section, and save the file. The supported schema versions include 26.6 (default), 26.3, 25.9, 25.6, 24.11, and 24.7.\n\n    ",
+        "   > **Note:** If `~/.claude.json` already exists, merge the `mdk-mcp` entry into the existing `mcpServers` section rather than replacing the entire file.\n\n    3. Reload the VS Code window (or restart VS Code).\n\n    ### Verify the installation\n\n    Open the Claude Code panel in VS Code and run:\n\n    "
+      ],
+      "errors": [],
+      "repository": "https://github.com/sap/mdk-mcp-server",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.snyk.studio-mcp",
+      "title": "Snyk Security",
+      "slug": "snyk-security",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.snyk.studio-mcp",
+      "checkedAt": "2026-09-26T11:15:25.333968+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/snyk/studio-mcp/main/README.md",
+        "https://github.com/snyk/studio-mcp/releases/tag/v1.15.4"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/snyk/studio-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.spikeycoder.website-auditor-mcp",
+      "title": "Website Auditor",
+      "slug": "website-auditor",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.spikeycoder.website-auditor-mcp",
+      "checkedAt": "2026-09-26T11:15:25.360274+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/spikeycoder/website-auditor-mcp/main/README.md",
+        "https://github.com/spikeycoder/website-auditor-mcp/releases/tag/v1.0.24"
+      ],
+      "packages": [],
+      "configurations": [
+        "---\n\n## Install & configure\n\nThe server runs directly via `npx` \u2014 no clone or build required.\n\n**Try it before you buy it.** Install with no API key at all and ask your agent\nfor a *sample audit* \u2014 `get_sample_audit` returns a full report for `example.com`\nin the exact format a real run produces, so you can check the shape fits your\nneeds first.\n\n**Pricing.** Auditing real domains needs a Website Auditor subscription at\n**$10/month** \u2014 eligible new customers get a **7-day free trial** (payment\nmethod required to start; no charge until the trial ends; customers who used\na trial in the last 12 months are billed immediately). Sign up and create an\nAPI key at\n**[api.website-auditor.io/admin_portal](https://api.website-auditor.io/admin_portal/?source=mcp)**,\nthen set it as `WA_API_KEY` below. There is no free API tier \u2014 a key only\nfunctions with an active subscription.\n\n**Claude Desktop** (`claude_desktop_config.json`), **Cursor**\n(`~/.cursor/mcp.json`), and most other clients use the same `mcpServers` shape:\n\n",
+        "**Cursor** \u2014 one-click install, or put the same `mcpServers` JSON as above in\n`~/.cursor/mcp.json`:\n\n[![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=website-auditor&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIndlYnNpdGUtYXVkaXRvci1tY3AiXSwiZW52Ijp7IldBX0FQSV9LRVkiOiIifX0%3D)\n\nThe one-click config arrives with an empty `WA_API_KEY` \u2014 the sample report\nworks as-is; fill the key in under **Settings \u2192 MCP** to audit real domains.\nThere is also a packaged **Cursor plugin** (this server plus the prompts as\nskills) in [`cursor-plugin/`](cursor-plugin/); its Cursor Marketplace listing\nis pending \u2014 status in [docs/CURSOR-PLUGIN.md](docs/CURSOR-PLUGIN.md).\n\nRestart the client and the tools appear.\n\n### Getting an API key\n\n`WA_API_KEY` is a per-user key (it starts with `wa_`) minted from a Website\nAuditor account at\n**[api.website-auditor.io/admin_portal](https://api.website-auditor.io/admin_portal/?source=mcp)**\n\u2014 the admin portal, where you subscribe and manage keys.\n\nMinting a key requires an active subscription ($10/month; eligible new\ncustomers get a 7-day free trial \u2014 payment method required, no charge until\nthe trial ends): there is no free API tier, so every tool except\n`get_sample_audit` and `check_upgrade_status` needs one. `get_sample_audit`\nneeds no key at all.\n\nTreat the key like a password \u2014 set it only in your MCP client's `env` and never\ncommit it.\n\n**Restart after setting or changing the key.** `WA_API_KEY` is read once, when\nthe server starts, so a key added while the client is running is invisible to\nit \u2014 in Claude Desktop, quit and reopen the app. Without the restart the tools\nkeep returning the same `AUTH_REQUIRED` you just acted on, which looks\nidentical to the key not working.\n\n### Configuration (environment variables)\n\n| Var | Default | Purpose |\n|---|---|---|\n| `WA_API_KEY` | _(required)_ | Per-user API key (starts with `wa_`). |\n| `WA_API_BASE_URL` | `https://api.website-auditor.io` | The Website Auditor API this server wraps. |\n| `WA_SITE_URL` | `https://website-auditor.io` | Used to build shareable report links. |\n| `WA_UPGRADE_URL` | `https://api.website-auditor.io/admin_portal/` | Where auth and subscription errors point you. `?source=mcp` is appended so a signup that started here is attributable; set your own `source` to override. Not surfaced on quota errors \u2014 the daily cap is not an upsell. |\n| `WA_REQUEST_TIMEOUT_MS` | `120000` | Timeout for API calls. |\n| `WA_AUDIT_CACHE_TTL_MS` | `86400000` | Reuse a domain's audit within this window instead of spending quota (used by `compare_competitors`). Defaults to 24h. |\n| `WA_SUBSCRIPTION_CACHE_TTL_MS` | `60000` | How long a resolved Pro/free tier is cached per key before re-checking the subscription. |\n| `WA_METRICS_DISABLED` | _(unset \u2192 metrics on)_ | Set to `1`/`true` to disable anonymous usage telemetry. |\n\nOnly `WA_API_KEY` is normally needed; the rest have sensible defaults. See\n[`.env.example`](.env.example) for the full list.\n\n---\n\n## Auth & tiers\n\nYour key is validated on every call. The Pro/free tier is resolved live from the\nAPI and cached briefly, so upgrades and downgrades take effect within about a\nminute:\n\n- **No key** \u2192 `get_sample_audit` still works (that's the point of it); every\n  other tool returns `AUTH_REQUIRED` with the price and a sign-up link.\n- **Revoked or unrecognized key** \u2192 `INVALID_KEY`, carrying the API's own\n  remediation (\"generate a new key\"). Distinct from `PRO_REQUIRED`: the fix is a\n  new key, not a purchase.\n- **No active subscription** (valid key, lapsed/canceled/never subscribed) \u2192\n  `PRO_REQUIRED` with the price and an upgrade link \u2014 there is no free API tier;\n  `check_upgrade_status` still answers so the caller can learn why.\n- **Subscribed** (status `active` or a trial in progress) \u2192 all tools.\n\nErrors are normalized to stable codes agents can branch on \u2014 e.g.\n`AUTH_REQUIRED`, `INVALID_KEY`, `PRO_REQUIRED`, `OVER_QUOTA`,\n`UNREACHABLE_DOMAIN`, `INVALID_INPUT`, `TIMEOUT`. A domain that resolves but\nwhose pages never load (down, refusing, timing out, or answering 404/5xx on\nevery page) returns `UNREACHABLE_DOMAIN`; one that does not resolve is refused\nbefore any audit runs, as `INVALID_INPUT`. Neither gets a fabricated score.\n\n---\n\n## Develop\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/spikeycoder/website-auditor-mcp",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.cursortouch.android-mcp",
+      "title": "Android-MCP",
+      "slug": "android-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.cursortouch.android-mcp",
+      "checkedAt": "2026-09-26T11:15:25.396962+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/cursortouch/android-mcp/master/README.md",
+        "https://github.com/cursortouch/android-mcp/releases/tag/v0.2.0"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/cursortouch/android-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.hautpsachenet.clickup-mcp",
+      "title": "ClickUp",
+      "slug": "clickup-2f35af",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.hautpsachenet.clickup-mcp",
+      "checkedAt": "2026-09-26T11:15:25.543265+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/hautpsachenet/clickup-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.ondata.ckan-mcp-server",
+      "title": "CKAN MCP Server",
+      "slug": "ckan-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.ondata.ckan-mcp-server",
+      "checkedAt": "2026-09-26T11:15:25.716848+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/ondata/ckan-mcp-server/main/README.md",
+        "https://github.com/ondata/ckan-mcp-server/releases/tag/v0.4.127"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/ondata/ckan-mcp-server/releases/download/v0.4.127/ckan-mcp-server.dxt",
+          "evidence": "https://github.com/ondata/ckan-mcp-server/releases/expanded_assets/v0.4.127",
+          "name": "ckan-mcp-server.dxt"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"ckan\": {\n      \"url\": \"https://ckan-mcp-server.andy-pr.workers.dev/mcp\"\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"ckan\": {\n      \"command\": \"npx\",\n      \"args\": [\"@aborruso/ckan-mcp-server@latest\"]\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/ondata/ckan-mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.qase-tms.qase-mcp-server",
+      "title": "Qase Test Management",
+      "slug": "qase-test-management",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.qase-tms.qase-mcp-server",
+      "checkedAt": "2026-09-26T11:15:26.034087+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/qase-tms/qase-mcp-server/main/README.md",
+        "https://github.com/qase-tms/qase-mcp-server/releases/tag/v2.7.4"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/qase-tms/qase-mcp-server",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.teamtinvio.jaz-ai",
+      "title": "Jaz Accounting",
+      "slug": "jaz-accounting",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.teamtinvio.jaz-ai",
+      "checkedAt": "2026-09-26T11:15:26.290900+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/teamtinvio/jaz-ai/main/README.md",
+        "https://github.com/teamtinvio/jaz-ai/releases/tag/v5.74.1"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/teamtinvio/jaz-ai/releases/download/v5.74.1/jaz-ai-5.74.1.mcpb",
+          "evidence": "https://github.com/teamtinvio/jaz-ai/releases/expanded_assets/v5.74.1",
+          "name": "jaz-ai-5.74.1.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"jaz\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"jaz-clio@5.74.1\", \"mcp\", \"--org\", \"oauth:<resourceId>\"]\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/teamtinvio/jaz-ai",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.dynatrace-oss.dynatrace-mcp",
+      "title": "Dynatrace MCP Server",
+      "slug": "dynatrace-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.dynatrace-oss.dynatrace-mcp",
+      "checkedAt": "2026-09-26T11:15:26.502880+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/dynatrace-oss/dynatrace-mcp/main/README.md",
+        "https://github.com/dynatrace-oss/dynatrace-mcp/releases/tag/v2.1.2"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/dynatrace-oss/dynatrace-mcp/releases/download/v2.1.2/dynatrace-mcp-server-2.1.2.mcpb",
+          "evidence": "https://github.com/dynatrace-oss/dynatrace-mcp/releases/expanded_assets/v2.1.2",
+          "name": "dynatrace-mcp-server-2.1.2.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"dynatrace-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@dynatrace-oss/dynatrace-mcp-server@latest\"],\n      \"env\": {\n        \"DT_ENVIRONMENT\": \"https://abc12345.apps.dynatrace.com\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"dynatrace-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@dynatrace-oss/dynatrace-mcp-server@latest\"],\n      \"env\": {\n        \"DT_ENVIRONMENT\": \"https://abc12345.apps.dynatrace.com\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"dynatrace-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@dynatrace-oss/dynatrace-mcp-server@latest\"],\n      \"env\": {\n        \"DT_ENVIRONMENT\": \"https://abc12345.apps.dynatrace.com\"\n      }\n    }\n  }\n}\n",
+        "### MCP Bundle (MCPB)\n\nEach release publishes a pre-built MCP Bundle file (`.mcpb`) that you can install directly in Claude Desktop without any manual JSON configuration.\n\n**Installing in Claude Desktop:**\n\n1. Go to the [GitHub Releases](https://github.com/dynatrace-oss/dynatrace-mcp/releases) page and download the latest `dynatrace-mcp-server-<version>.mcpb` file.\n2. Double-click the downloaded `.mcpb` file, or open Claude Desktop \u2192 **Settings** \u2192 **Developer** and drag the file into the MCP servers list.\n3. Follow the prompts to set your `DT_ENVIRONMENT` variable (e.g. `https://abc12345.apps.dynatrace.com`).\n\nThis repository also includes an MCP Bundle-compatible [manifest.json](manifest.json) for local installation.\nThe bundle runs the compiled local server entrypoint via stdio:\n\n- `server.type`: `node`\n- `server.entry_point`: `dist/index.js`\n- `mcp_config.command`: `node`\n- `mcp_config.args`: `[\"${__dirname}/dist/index.js\"]`\n\n### Rule File\n\nFor efficient result retrieval from Dynatrace, please consider creating a rule file (e.g., [.github/copilot-instructions.md](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions), [.amazonq/rules/](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/context-project-rules.html)), instructing coding agents on how to get more details for your component/app/service. Here is an example for [easytrade](https://github.com/Dynatrace/easytrade), please adapt the names and filters to fit your use-cases and components:\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/dynatrace-oss/dynatrace-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.oogunbiyi21.stats-compass-mcp",
+      "title": "Stats Compass",
+      "slug": "stats-compass",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.oogunbiyi21.stats-compass-mcp",
+      "checkedAt": "2026-09-26T11:15:26.750361+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/oogunbiyi21/stats-compass-mcp/main/README.md",
+        "https://github.com/oogunbiyi21/stats-compass-mcp/releases/tag/v0.3.13"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/oogunbiyi21/stats-compass-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.browser-control-firefox",
+      "title": "Firefox Control",
+      "slug": "firefox-control",
+      "directoryUrl": "https://claude.ai/directory/browser-control-firefox",
+      "checkedAt": "2026-09-26T11:15:26.779879+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.gh.flatirontek.vybit-mcp",
+      "title": "Vybit Notifications",
+      "slug": "vybit-notifications",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.flatirontek.vybit-mcp",
+      "checkedAt": "2026-09-26T11:15:26.779916+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/flatirontek/vybit-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.openbnb-org.mcp-server-airbnb",
+      "title": "Airbnb Search & Listings",
+      "slug": "airbnb-search-listings",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.openbnb-org.mcp-server-airbnb",
+      "checkedAt": "2026-09-26T11:15:26.892703+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/openbnb-org/mcp-server-airbnb/main/README.md",
+        "https://github.com/openbnb-org/mcp-server-airbnb/releases/tag/v0.3.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/openbnb-org/mcp-server-airbnb/releases/download/v0.3.0/mcp-server-airbnb.mcpb",
+          "evidence": "https://github.com/openbnb-org/mcp-server-airbnb/releases/expanded_assets/v0.3.0",
+          "name": "mcp-server-airbnb.mcpb"
+        }
+      ],
+      "configurations": [
+        "    {\n      \"mcpServers\": {\n        \"airbnb\": {\n          \"command\": \"npx\",\n          \"args\": [\n            \"-y\",\n            \"@openbnb/mcp-server-airbnb\"\n          ]\n        }\n      }\n    }\n    ",
+        "    {\n      \"mcpServers\": {\n        \"airbnb\": {\n          \"command\": \"npx\",\n          \"args\": [\n            \"-y\",\n            \"@openbnb/mcp-server-airbnb\",\n            \"--ignore-robots-txt\"\n          ]\n        }\n      }\n    }\n    "
+      ],
+      "errors": [],
+      "repository": "https://github.com/openbnb-org/mcp-server-airbnb",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.apius-tech.panos-mcp",
+      "title": "PanOS MCP",
+      "slug": "panos-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.apius-tech.panos-mcp",
+      "checkedAt": "2026-09-26T11:15:27.117440+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/apius-tech/panos-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.mbmccormick.things",
+      "title": "Things (AppleScript)",
+      "slug": "things-applescript",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.mbmccormick.things",
+      "checkedAt": "2026-09-26T11:15:27.192899+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/mbmccormick/things",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.sap.cap-js-mcp-server",
+      "title": "SAP CAP MCP Server",
+      "slug": "sap-cap-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.sap.cap-js-mcp-server",
+      "checkedAt": "2026-09-26T11:15:27.551288+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/sap/cap-js-mcp-server",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.smartbear.smartbear-mcp",
+      "title": "SmartBear MCP",
+      "slug": "smartbear-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.smartbear.smartbear-mcp",
+      "checkedAt": "2026-09-26T11:15:27.760025+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/smartbear/smartbear-mcp/main/README.md",
+        "https://github.com/smartbear/smartbear-mcp/releases/tag/v0.41.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/SmartBear/smartbear-mcp/releases/download/v0.41.0/smartbear-mcp-0.41.0.mcpb",
+          "evidence": "https://github.com/smartbear/smartbear-mcp/releases/expanded_assets/v0.41.0",
+          "name": "smartbear-mcp-0.41.0.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"smartbear\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@smartbear/mcp@latest\"\n      ],\n      \"env\": {\n        \"BEARQ_API_TOKEN\": \"your_bearq_api_token\",\n        \"BUGSNAG_AUTH_TOKEN\": \"your_personal_auth_token\",\n        \"BUGSNAG_PROJECT_API_KEY\": \"your_project_api_key\",\n        \"REFLECT_API_TOKEN\": \"your_reflect_token\",\n        \"SWAGGER_API_KEY\": \"your_swagger_key\",\n        \"SWAGGER_PORTAL_BASE_PATH\": \"https://api.portal.swaggerhub.com/v1\",\n        \"SWAGGER_REGISTRY_BASE_PATH\": \"https://api.swaggerhub.com\",\n        \"SWAGGER_UI_BASE_PATH\": \"https://app.swaggerhub.com\",\n        \"PACT_BROKER_BASE_URL\": \"your_pactflow_or_pactbroker_base_url\",\n        \"PACT_BROKER_TOKEN\": \"your_pactflow_token\",\n        \"PACT_BROKER_USERNAME\": \"your_pact_broker_username\",\n        \"PACT_BROKER_PASSWORD\": \"your_pact_broker_password\",\n        \"QMETRY_API_KEY\": \"your_qmetry_api_key\",\n        \"QMETRY_BASE_URL\": \"https://testmanagement.qmetry.com\",\n        \"ZEPHYR_API_TOKEN\": \"your_zephyr_api_token\",\n        \"ZEPHYR_BASE_URL\": \"https://api.zephyrscale.smartbear.com/v2\",\n        \"COLLABORATOR_BASE_URL\": \"your collab base url\",\n        \"COLLABORATOR_USERNAME\": \"your collab user name\",\n        \"COLLABORATOR_LOGIN_TICKET\": \"your collab login ticket\",\n        \"QTM4J_API_KEY\": \"your_qtm4j_key\",\n        \"QTM4J_BASE_URL\": \"https://qtmcloud.qmetry.com\",\n        \"QTM4J_AUTOMATION_API_KEY\": \"your_qtm4j_automation_api_key\",\n        \"SWAGGER_FUNCTIONAL_TESTING_API_TOKEN\": \"your_swagger_functional_testing_api_token\",\n        \"SWAGGER_FUNCTIONAL_TESTING_BASE_PATH\": \"https://api.reflect.run/v1\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/smartbear/smartbear-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.stackql.stackql",
+      "title": "StackQL MCP Server",
+      "slug": "stackql-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.stackql.stackql",
+      "checkedAt": "2026-09-26T11:15:27.928013+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/stackql/stackql/main/README.md",
+        "https://github.com/stackql/stackql/releases/tag/v0.12.718"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/stackql/stackql/releases/download/v0.12.718/stackql-mcp-darwin-universal.mcpb",
+          "evidence": "https://github.com/stackql/stackql/releases/expanded_assets/v0.12.718",
+          "name": "stackql-mcp-darwin-universal.mcpb"
+        },
+        {
+          "url": "https://github.com/stackql/stackql/releases/download/v0.12.718/stackql-mcp-linux-arm64.mcpb",
+          "evidence": "https://github.com/stackql/stackql/releases/expanded_assets/v0.12.718",
+          "name": "stackql-mcp-linux-arm64.mcpb"
+        },
+        {
+          "url": "https://github.com/stackql/stackql/releases/download/v0.12.718/stackql-mcp-linux-x64.mcpb",
+          "evidence": "https://github.com/stackql/stackql/releases/expanded_assets/v0.12.718",
+          "name": "stackql-mcp-linux-x64.mcpb"
+        },
+        {
+          "url": "https://github.com/stackql/stackql/releases/download/v0.12.718/stackql-mcp-multiplatform.mcpb",
+          "evidence": "https://github.com/stackql/stackql/releases/expanded_assets/v0.12.718",
+          "name": "stackql-mcp-multiplatform.mcpb"
+        },
+        {
+          "url": "https://github.com/stackql/stackql/releases/download/v0.12.718/stackql-mcp-windows-x64.mcpb",
+          "evidence": "https://github.com/stackql/stackql/releases/expanded_assets/v0.12.718",
+          "name": "stackql-mcp-windows-x64.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/stackql/stackql",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.tariqalagha.brave-browser-control",
+      "title": "Brave (AppleScript)",
+      "slug": "brave-applescript",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.tariqalagha.brave-browser-control",
+      "checkedAt": "2026-09-26T11:15:28.016137+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/TariqAlagha/brave-browser-control/main/README.md",
+        "https://github.com/TariqAlagha/brave-browser-control/releases"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/TariqAlagha/brave-browser-control",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.vendr.vendr-mcp",
+      "title": "Vendr Software Pricing Tools",
+      "slug": "vendr-software-pricing-tools",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.vendr.vendr-mcp",
+      "checkedAt": "2026-09-26T11:15:28.026864+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/vendr/vendr-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.adobe.s2",
+      "title": "React Spectrum (S2)",
+      "slug": "react-spectrum-s2",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.adobe.s2",
+      "checkedAt": "2026-09-26T11:15:28.125343+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/adobe/s2",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.cicatriiz.pophive",
+      "title": "PopHIVE Public Health Data",
+      "slug": "pophive-public-health-data",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.cicatriiz.pophive",
+      "checkedAt": "2026-09-26T11:15:28.151714+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/cicatriiz/pophive",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.lindoai.mcp-server",
+      "title": "Lindo AI",
+      "slug": "lindo-ai",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.lindoai.mcp-server",
+      "checkedAt": "2026-09-26T11:15:28.224953+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/lindoai/mcp-server/main/README.md",
+        "https://github.com/lindoai/mcp-server/releases/tag/v1.1.1"
+      ],
+      "packages": [],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"lindo\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@lindoai/mcp-server\"],\n      \"env\": {\n        \"LINDO_API_KEY\": \"your_api_key_here\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/lindoai/mcp-server",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.pokt-network.blockchain-query-mcp",
+      "title": "BlockchainQuery",
+      "slug": "blockchainquery",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.pokt-network.blockchain-query-mcp",
+      "checkedAt": "2026-09-26T11:15:28.475919+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/pokt-network/blockchain-query-mcp/main/README.md",
+        "https://github.com/pokt-network/blockchain-query-mcp/releases/tag/v2.1.2"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/pokt-network/blockchain-query-mcp/releases/latest/download/BlockchainQuery.mcpb",
+          "evidence": "https://raw.githubusercontent.com/pokt-network/blockchain-query-mcp/main/README.md",
+          "name": "BlockchainQuery.mcpb"
+        },
+        {
+          "url": "https://github.com/pokt-network/blockchain-query-mcp/releases/download/v2.1.2/BlockchainQuery.mcpb",
+          "evidence": "https://github.com/pokt-network/blockchain-query-mcp/releases/expanded_assets/v2.1.2",
+          "name": "BlockchainQuery.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/pokt-network/blockchain-query-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.defensedotcom.defense-mcp",
+      "title": "Defense.com Threat Analysis",
+      "slug": "defense-com-threat-analysis",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.defensedotcom.defense-mcp",
+      "checkedAt": "2026-09-26T11:15:28.959292+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/defensedotcom/defense-mcp/main/README.md",
+        "https://github.com/defensedotcom/defense-mcp/releases"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/defensedotcom/defense-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.meetgeek.meetgeek-mcp",
+      "title": "MeetGeek",
+      "slug": "meetgeek",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.meetgeek.meetgeek-mcp",
+      "checkedAt": "2026-09-26T11:15:29.058518+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/meetgeek/meetgeek-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.microsoft.mcp-osx-arm64",
+      "title": "Azure MCP Server",
+      "slug": "azure-mcp-server-7eab26",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.microsoft.mcp-osx-arm64",
+      "checkedAt": "2026-09-26T11:15:29.122100+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/microsoft/mcp-osx-arm64",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.perseus-computing-llc.perseus-vault",
+      "title": "Perseus Vault \u2014 Persistent Memory for Claude",
+      "slug": "perseus-vault-persistent-memory-for-claude",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.perseus-computing-llc.perseus-vault",
+      "checkedAt": "2026-09-26T11:15:29.143887+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/perseus-computing-llc/perseus-vault",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.sketch-hq.sketch-mcp",
+      "title": "Sketch",
+      "slug": "sketch",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.sketch-hq.sketch-mcp",
+      "checkedAt": "2026-09-26T11:15:29.338097+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/sketch-hq/sketch-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.adobe.react-aria",
+      "title": "React Aria",
+      "slug": "react-aria",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.adobe.react-aria",
+      "checkedAt": "2026-09-26T11:15:29.568299+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/adobe/react-aria",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "wf.68f2d8ef8c8510c35f0ecb7d",
+      "title": "10x Genomics Cloud",
+      "slug": "10x-genomics-cloud",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.ant.txg.mcp-server",
+      "checkedAt": "2026-09-26T11:15:29.733730+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "status": "registry-or-publisher-setup",
+      "note": "No public repository linked. Claude registry may require Claude account sign-in."
+    },
+    {
+      "id": "connector.ant.dir.gh.rapid7.rapid7-bulk-export-mcp",
+      "title": "Rapid7 Bulk Export",
+      "slug": "rapid7-bulk-export",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.rapid7.rapid7-bulk-export-mcp",
+      "checkedAt": "2026-09-26T11:15:29.733744+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/rapid7/rapid7-bulk-export-mcp/main/README.md",
+        "https://github.com/rapid7/rapid7-bulk-export-mcp/releases/tag/v0.6.2"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/rapid7/rapid7-bulk-export-mcp/releases/download/v0.6.2/rapid7-bulk-export-mcp.mcpb",
+          "evidence": "https://github.com/rapid7/rapid7-bulk-export-mcp/releases/expanded_assets/v0.6.2",
+          "name": "rapid7-bulk-export-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "#### Configure\n\nEdit your Antigravity MCP config file:\n\n- **macOS/Linux:** `~/.gemini/antigravity/mcp_config.json`\n- **Windows:** `C:\\Users\\<USERNAME>\\.gemini\\antigravity\\mcp_config.json`\n\nYou can also access this file from the Antigravity Agent panel \u2192 \"...\" \u2192 MCP Servers \u2192 Manage MCP Servers \u2192 View raw config.\n\nAdd the following to `mcp_config.json`:\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/rapid7/rapid7-bulk-export-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.convisoappsec.conviso-mcp",
+      "title": "Conviso MCP Server",
+      "slug": "conviso-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.convisoappsec.conviso-mcp",
+      "checkedAt": "2026-09-26T11:15:29.930711+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/convisoappsec/conviso-mcp/main/README.md",
+        "https://github.com/convisoappsec/conviso-mcp/releases/tag/v0.8.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/convisoappsec/conviso-mcp/releases/download/v0.8.0/conviso-mcp-0.8.0.mcpb",
+          "evidence": "https://github.com/convisoappsec/conviso-mcp/releases/expanded_assets/v0.8.0",
+          "name": "conviso-mcp-0.8.0.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"conviso\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@convisoappsec/mcp\"],\n      \"env\": { \"CONVISO_API_KEY\": \"your_api_key_here\" }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/convisoappsec/conviso-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.instana.mcp-instana",
+      "title": "MCP Instana Server",
+      "slug": "mcp-instana-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.instana.mcp-instana",
+      "checkedAt": "2026-09-26T11:15:30.023431+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/instana/mcp-instana/main/README.md",
+        "https://github.com/instana/mcp-instana/releases"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/instana/mcp-instana",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.local-falcon.mcp",
+      "title": "Local Falcon",
+      "slug": "local-falcon-7832b1",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.local-falcon.mcp",
+      "checkedAt": "2026-09-26T11:15:30.028661+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/local-falcon/mcp/main/README.md",
+        "https://github.com/local-falcon/mcp/releases/tag/v1.4.16"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/local-falcon/mcp/releases/download/v1.4.16/local-falcon-mcp.mcpb",
+          "evidence": "https://github.com/local-falcon/mcp/releases/expanded_assets/v1.4.16",
+          "name": "local-falcon-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"local-falcon-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"mcp-remote\",\n        \"https://mcp.localfalcon.com/mcp?local_falcon_api_key=INSERT_YOUR_API_KEY_HERE\"\n      ]\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"local-falcon-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"mcp-remote\",\n        \"https://mcp.localfalcon.com/sse?local_falcon_api_key=INSERT_YOUR_API_KEY_HERE\"\n      ]\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/local-falcon/mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.harness.mcp-server",
+      "title": "Harness MCP Server",
+      "slug": "harness-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.harness.mcp-server",
+      "checkedAt": "2026-09-26T11:15:30.145055+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/harness/mcp-server/main/README.md",
+        "https://github.com/harness/mcp-server/releases/tag/v3.2.30"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/harness/mcp-server/releases/download/v3.2.30/harness-mcp-server-3.2.30.mcpb",
+          "evidence": "https://github.com/harness/mcp-server/releases/expanded_assets/v3.2.30",
+          "name": "harness-mcp-server-3.2.30.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/harness/mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.miggo-io.miggo-mcp",
+      "title": "Miggo",
+      "slug": "miggo",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.miggo-io.miggo-mcp",
+      "checkedAt": "2026-09-26T11:15:30.150581+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/miggo-io/miggo-mcp/main/README.md",
+        "https://github.com/miggo-io/miggo-mcp/releases/tag/v0.9.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/miggo-io/miggo-mcp/releases/download/v0.9.0/miggo-mcp.mcpb",
+          "evidence": "https://github.com/miggo-io/miggo-mcp/releases/expanded_assets/v0.9.0",
+          "name": "miggo-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"miggo\": {\n      \"command\": \"uvx\",\n      \"args\": [\"--from\", \"git+https://github.com/miggo-io/miggo-mcp\", \"miggo-mcp\"],\n      \"env\": {\n        \"MIGGO_PUBLIC_TOKEN\": \"<your-token>\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"miggo\": {\n      \"command\": \"uvx\",\n      \"args\": [\"--from\", \"git+https://github.com/miggo-io/miggo-mcp\", \"miggo-mcp\"],\n      \"env\": {\n        \"MIGGO_PUBLIC_TOKEN\": \"<your-token>\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/miggo-io/miggo-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.bentleysystems.openstaad-mcp",
+      "title": "OpenSTAAD MCP Server",
+      "slug": "openstaad-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.bentleysystems.openstaad-mcp",
+      "checkedAt": "2026-09-26T11:15:30.267661+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/bentleysystems/openstaad-mcp/main/README.md",
+        "https://github.com/bentleysystems/openstaad-mcp/releases/tag/v1.2.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/BentleySystems/openstaad-mcp/releases/download/v1.2.0/openstaad-mcp.mcpb",
+          "evidence": "https://github.com/bentleysystems/openstaad-mcp/releases/expanded_assets/v1.2.0",
+          "name": "openstaad-mcp.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/bentleysystems/openstaad-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.jerbouma.financetoolkit",
+      "title": "Finance Toolkit",
+      "slug": "finance-toolkit",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.jerbouma.financetoolkit",
+      "checkedAt": "2026-09-26T11:15:30.532897+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/jerbouma/financetoolkit/main/README.md",
+        "https://github.com/jerbouma/financetoolkit/releases/tag/v2.2.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/JerBouma/FinanceToolkit/releases/latest/download/financetoolkit.mcpb",
+          "evidence": "https://raw.githubusercontent.com/jerbouma/financetoolkit/main/README.md",
+          "name": "financetoolkit.mcpb"
+        },
+        {
+          "url": "https://github.com/JerBouma/FinanceToolkit/releases/download/v2.2.0/financetoolkit.mcpb",
+          "evidence": "https://github.com/jerbouma/financetoolkit/releases/expanded_assets/v2.2.0",
+          "name": "financetoolkit.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/jerbouma/financetoolkit",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.kapeli.dash-mcp",
+      "title": "Dash",
+      "slug": "dash",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.kapeli.dash-mcp",
+      "checkedAt": "2026-09-26T11:15:31.322095+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/kapeli/dash-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.pspdfkit.nutrient-pdf-editor-mcp",
+      "title": "Nutrient PDF Editor",
+      "slug": "nutrient-pdf-editor",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.pspdfkit.nutrient-pdf-editor-mcp",
+      "checkedAt": "2026-09-26T11:15:31.380115+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/pspdfkit/nutrient-pdf-editor-mcp/main/README.md",
+        "https://github.com/pspdfkit/nutrient-pdf-editor-mcp/releases/tag/v1.1.5"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/PSPDFKit/nutrient-pdf-editor-mcp/releases/download/v1.1.5/nutrient-pdf-editor-mcp.mcpb",
+          "evidence": "https://github.com/pspdfkit/nutrient-pdf-editor-mcp/releases/expanded_assets/v1.1.5",
+          "name": "nutrient-pdf-editor-mcp.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/pspdfkit/nutrient-pdf-editor-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.resolume.resolume-arena",
+      "title": "Resolume Arena MCP Server",
+      "slug": "resolume-arena-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.resolume.resolume-arena",
+      "checkedAt": "2026-09-26T11:15:31.414579+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/resolume/resolume-arena",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.herosizy.cucumberstudio-mcp",
+      "title": "Cucumber Studio MCP",
+      "slug": "cucumber-studio-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.herosizy.cucumberstudio-mcp",
+      "checkedAt": "2026-09-26T11:15:31.477396+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/HeroSizy/cucumberstudio-mcp/master/README.md",
+        "https://github.com/HeroSizy/cucumberstudio-mcp/releases/tag/v1.2.2"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/HeroSizy/cucumberstudio-mcp/releases/download/v1.2.2/cucumberstudio-mcp-1.2.2.mcpb",
+          "evidence": "https://github.com/HeroSizy/cucumberstudio-mcp/releases/expanded_assets/v1.2.2",
+          "name": "cucumberstudio-mcp-1.2.2.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/HeroSizy/cucumberstudio-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.pspdfkit.nutrient-dws-mcp-server",
+      "title": "Nutrient DWS",
+      "slug": "nutrient-dws",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.pspdfkit.nutrient-dws-mcp-server",
+      "checkedAt": "2026-09-26T11:15:31.576998+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/pspdfkit/nutrient-dws-mcp-server/main/README.md",
+        "https://github.com/pspdfkit/nutrient-dws-mcp-server/releases/tag/v0.1.3"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/PSPDFKit/nutrient-dws-mcp-server/releases/download/v0.1.3/nutrient-dws-0.1.3.mcpb",
+          "evidence": "https://github.com/pspdfkit/nutrient-dws-mcp-server/releases/expanded_assets/v0.1.3",
+          "name": "nutrient-dws-0.1.3.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"nutrient-dws\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@nutrient-sdk/dws-mcp-server\"],\n      \"env\": {\n        \"SANDBOX_PATH\": \"/your/sandbox/directory\",\n        // \"C:\\\\your\\\\sandbox\\\\directory\" for Windows\n        // Optional for CI or headless usage:\n        // \"NUTRIENT_DWS_API_KEY\": \"YOUR_API_KEY_HERE\"\n      },\n    },\n  },\n}\n",
+        "{\n  \"mcpServers\": {\n    \"nutrient-dws\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@nutrient-sdk/dws-mcp-server\"],\n      \"env\": {\n        \"SANDBOX_PATH\": \"/your/project/documents\",\n        // \"C:\\\\your\\\\project\\\\documents\" for Windows\n        // Optional for CI or headless usage:\n        // \"NUTRIENT_DWS_API_KEY\": \"YOUR_API_KEY_HERE\"\n      },\n    },\n  },\n}\n",
+        "{\n  \"mcpServers\": {\n    \"nutrient-dws\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@nutrient-sdk/dws-mcp-server\"],\n      \"env\": {\n        \"SANDBOX_PATH\": \"/your/sandbox/directory\",\n        // \"C:\\\\your\\\\sandbox\\\\directory\" for Windows\n        // Optional for CI or headless usage:\n        // \"NUTRIENT_DWS_API_KEY\": \"YOUR_API_KEY_HERE\"\n      },\n    },\n  },\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/pspdfkit/nutrient-dws-mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.snapchat.lens-studio",
+      "title": "Lens Studio",
+      "slug": "lens-studio",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.snapchat.lens-studio",
+      "checkedAt": "2026-09-26T11:15:31.686171+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/snapchat/lens-studio",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.avanquest-software.avanquest-pdfapi-mcp-server",
+      "title": "Avanquest PDF API Extension",
+      "slug": "avanquest-pdf-api-extension",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.avanquest-software.avanquest-pdfapi-mcp-server",
+      "checkedAt": "2026-09-26T11:15:31.727191+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/avanquest-software/avanquest-pdfapi-mcp-server/main/README.md",
+        "https://github.com/avanquest-software/avanquest-pdfapi-mcp-server/releases/tag/v1.0.6"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/Avanquest-Software/avanquest-pdfapi-mcp-server/releases/latest/download/avanquest-pdfapi-mcp-server.mcpb",
+          "evidence": "https://raw.githubusercontent.com/avanquest-software/avanquest-pdfapi-mcp-server/main/README.md",
+          "name": "avanquest-pdfapi-mcp-server.mcpb"
+        },
+        {
+          "url": "https://github.com/Avanquest-Software/avanquest-pdfapi-mcp-server/releases/download/v1.0.6/avanquest-pdfapi-mcp-server.mcpb",
+          "evidence": "https://github.com/avanquest-software/avanquest-pdfapi-mcp-server/releases/expanded_assets/v1.0.6",
+          "name": "avanquest-pdfapi-mcp-server.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/avanquest-software/avanquest-pdfapi-mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.goplussecurity.agentguard",
+      "title": "GoPlus AgentGuard",
+      "slug": "goplus-agentguard",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.goplussecurity.agentguard",
+      "checkedAt": "2026-09-26T11:15:32.020899+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/goplussecurity/agentguard/main/README.md",
+        "https://github.com/goplussecurity/agentguard/releases/tag/v1.1.29"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/GoPlusSecurity/agentguard/releases/download/v1.1.29/agentguard.mcpb",
+          "evidence": "https://github.com/goplussecurity/agentguard/releases/expanded_assets/v1.1.29",
+          "name": "agentguard.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/goplussecurity/agentguard",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.resolume.resolume-wire",
+      "title": "Resolume Wire MCP Server",
+      "slug": "resolume-wire-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.resolume.resolume-wire",
+      "checkedAt": "2026-09-26T11:15:32.233601+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/resolume/resolume-wire",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.signwell.signwell-mcp",
+      "title": "SignWell",
+      "slug": "signwell",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.signwell.signwell-mcp",
+      "checkedAt": "2026-09-26T11:15:32.402396+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/signwell/signwell-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.tomba.tomba-mcp",
+      "title": "Tomba MCP Server",
+      "slug": "tomba-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.tomba.tomba-mcp",
+      "checkedAt": "2026-09-26T11:15:32.675500+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/tomba/tomba-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.oilpriceapi.mcp-server",
+      "title": "OilPriceAPI \u2014 Oil, Gas & Commodity Prices",
+      "slug": "oilpriceapi-oil-gas-commodity-prices",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.oilpriceapi.mcp-server",
+      "checkedAt": "2026-09-26T11:15:33.019466+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/oilpriceapi/mcp-server/main/README.md",
+        "https://github.com/oilpriceapi/mcp-server/releases/tag/v3.4.1"
+      ],
+      "packages": [],
+      "configurations": [
+        "### Windsurf\n\nAdd to `~/.codeium/windsurf/mcp_config.json`:\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/oilpriceapi/mcp-server",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.openreplay.openreplay",
+      "title": "OpenReplay",
+      "slug": "openreplay",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.openreplay.openreplay",
+      "checkedAt": "2026-09-26T11:15:33.033069+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/openreplay/openreplay/main/README.md",
+        "https://github.com/openreplay/openreplay/releases/tag/v1.28.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/openreplay/openreplay/releases/download/v1.28.0/openreplay-mcp-desktop.mcpb",
+          "evidence": "https://github.com/openreplay/openreplay/releases/expanded_assets/v1.28.0",
+          "name": "openreplay-mcp-desktop.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/openreplay/openreplay",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.bestpractical.mcp-server-rt",
+      "title": "RT (Request Tracker)",
+      "slug": "rt-request-tracker",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.bestpractical.mcp-server-rt",
+      "checkedAt": "2026-09-26T11:15:33.185679+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/bestpractical/mcp-server-rt/main/README.md",
+        "https://github.com/bestpractical/mcp-server-rt/releases/tag/0.3.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/bestpractical/mcp-server-rt/releases/download/0.3.0/mcp-server-rt.mcpb",
+          "evidence": "https://github.com/bestpractical/mcp-server-rt/releases/expanded_assets/0.3.0",
+          "name": "mcp-server-rt.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/bestpractical/mcp-server-rt",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.spranab.saga-mcp",
+      "title": "Saga \u2014 Project Tracker for AI Agents",
+      "slug": "saga-project-tracker-for-ai-agents",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.spranab.saga-mcp",
+      "checkedAt": "2026-09-26T11:15:33.333998+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/spranab/saga-mcp/master/README.md",
+        "https://github.com/spranab/saga-mcp/releases/tag/v1.17.1"
+      ],
+      "packages": [],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"saga\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"saga-mcp\"],\n      \"env\": { \"DB_PATH\": \"/absolute/path/to/your/project/.tracker.db\" }\n    }\n  }\n}\n"
+      ],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/spranab/saga-mcp",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.thecombatwombat.replicant-mcp",
+      "title": "Replicant MCP",
+      "slug": "replicant-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.thecombatwombat.replicant-mcp",
+      "checkedAt": "2026-09-26T11:15:33.342919+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/thecombatwombat/replicant-mcp/master/README.md",
+        "https://github.com/thecombatwombat/replicant-mcp/releases/tag/v1.6.7"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/thecombatwombat/replicant-mcp/releases/download/v1.6.7/replicant-mcp.mcpb",
+          "evidence": "https://github.com/thecombatwombat/replicant-mcp/releases/expanded_assets/v1.6.7",
+          "name": "replicant-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "### Windsurf\n\nAdd to `~/.codeium/windsurf/mcp_config.json`:\n\n"
+      ],
+      "errors": [
+        "README main: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/thecombatwombat/replicant-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.ultipa.ultipa-mcp",
+      "title": "Ultipa",
+      "slug": "ultipa",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.ultipa.ultipa-mcp",
+      "checkedAt": "2026-09-26T11:15:33.440639+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/ultipa/ultipa-mcp/main/README.md",
+        "https://github.com/ultipa/gqldb-mcp/releases/tag/1.2.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/ultipa/gqldb-mcp/releases/download/1.2.0/gqldb-mcp-1.2.0.mcpb",
+          "evidence": "https://github.com/ultipa/gqldb-mcp/releases/expanded_assets/1.2.0",
+          "name": "gqldb-mcp-1.2.0.mcpb"
+        }
+      ],
+      "configurations": [
+        "Verify with `claude mcp list`.\n\n### Claude Web\n\nClaude Web supports Ultipa as a remote MCP server. Each user authenticates via OAuth against their own Ultipa Cloud account, so there's no API key to manage and every user only sees their own instances.\n\n1. Open Claude Web \u2192 **Settings \u2192 Connectors \u2192 Add custom connector**.\n2. Fill in:\n   - **Name:** `Ultipa` (or any label you prefer)\n   - **Remote MCP server URL:** `https://mcp.ultipa.com`\n   - **OAuth Client ID:** `oac_b67435362986`\n   - **OAuth Client Secret:** leave blank\n3. Click **Add** to close the modal, then click **Connect**. You'll be redirected to `account.ultipa.com` to sign in (or create an account) and approve access.\n4. Once authorized, Claude can use any of the Ultipa Cloud tools as your account.\n\nTo review or revoke access at any time, visit [account.ultipa.com/connected-apps](https://account.ultipa.com/connected-apps).\n\n> Self-managed (Direct) instances aren't reachable via Claude Web. There's no per-user way to inject `ULTIPA_HOST`/`USERNAME`/`PASSWORD` over OAuth. For Direct instances, use Claude Desktop, Claude Code, or stdio clients (below).\n\n### Manual config (any stdio client)\n\nAdd an entry under `mcpServers` in your MCP client's config. The same JSON shape works in any stdio MCP client; only the file path differs:\n\n| Client | Config file |\n|---|---|\n| Claude Desktop | `claude_desktop_config.json` (Settings \u2192 Developer \u2192 Edit Config) |\n| Cursor | `~/.cursor/mcp.json` |\n| Windsurf | `~/.codeium/windsurf/mcp_config.json` |\n| VS Code MCP extensions | extension-specific (see the extension's docs) |\n\n#### One target\n\nFor an Ultipa Cloud account:\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/ultipa/ultipa-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.blackducksoftware.mcp-server",
+      "title": "Black Duck Security Scanner",
+      "slug": "black-duck-security-scanner",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.blackducksoftware.mcp-server",
+      "checkedAt": "2026-09-26T11:15:33.459098+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/blackducksoftware/mcp-server/main/README.md",
+        "https://github.com/blackducksoftware/mcp-server/releases/tag/v1.1.8"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/blackducksoftware/mcp-server/releases/download/v1.1.8/black-duck-mcp-1.1.8.mcpb",
+          "evidence": "https://github.com/blackducksoftware/mcp-server/releases/expanded_assets/v1.1.8",
+          "name": "black-duck-mcp-1.1.8.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"black-duck-signal\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@black-duck/mcp-server\"],\n      \"env\": {\n        \"BLACKDUCK_MCP_GATEWAY_KEY\": \"your-api-key-here\"\n      }\n    }\n  }\n}\n",
+        "{\n  \"mcpServers\": {\n    \"black-duck\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@black-duck/mcp-server\"],\n      \"env\": {\n        \"BLACKDUCK_MCP_GATEWAY_KEY\": \"your-api-key-here\",\n        \"BLACKDUCK_MCP_LOG_LEVEL\": \"debug\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/blackducksoftware/mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.nickjlamb.redacta",
+      "title": "Redacta",
+      "slug": "redacta",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.nickjlamb.redacta",
+      "checkedAt": "2026-09-26T11:15:33.636523+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/nickjlamb/redacta/main/README.md",
+        "https://github.com/nickjlamb/redacta/releases/tag/redacta-2.1.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/nickjlamb/redacta/releases/download/redacta-2.1.0/redacta-2.1.0.mcpb",
+          "evidence": "https://github.com/nickjlamb/redacta/releases/expanded_assets/redacta-2.1.0",
+          "name": "redacta-2.1.0.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/nickjlamb/redacta",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.kiteworks.mcp",
+      "title": "Kiteworks MCP Server",
+      "slug": "kiteworks-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.kiteworks.mcp",
+      "checkedAt": "2026-09-26T11:15:34.387419+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/kiteworks/mcp/main/README.md",
+        "https://github.com/kiteworks/mcp/releases/tag/0.9.5"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/kiteworks/mcp/releases/download/0.9.5/kiteworks-mcp_0.9.5.mcpb",
+          "evidence": "https://github.com/kiteworks/mcp/releases/expanded_assets/0.9.5",
+          "name": "kiteworks-mcp_0.9.5.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/kiteworks/mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.lagrowthmachine.lgm-mcp-server",
+      "title": "La Growth Machine",
+      "slug": "la-growth-machine",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.lagrowthmachine.lgm-mcp-server",
+      "checkedAt": "2026-09-26T11:15:34.575422+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/lagrowthmachine/lgm-mcp-server",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.oborseth.porkbun-mcp",
+      "title": "Porkbun",
+      "slug": "porkbun",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.oborseth.porkbun-mcp",
+      "checkedAt": "2026-09-26T11:15:34.813842+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/oborseth/porkbun-mcp/main/README.md",
+        "https://github.com/oborseth/porkbun-mcp/releases"
+      ],
+      "packages": [],
+      "configurations": [
+        "Restart Claude Desktop. Porkbun tools should appear in the tool picker.\n\n> **Docs-only, no keys:** the documentation tools (`search_docs`, `read_doc`, `list_doc_topics`) work without credentials, so you can omit the `env` block entirely to use the server just for API research. The authenticated tools return a clear \"set PORKBUN_API_KEY\" message until you add keys.\n\n### Cursor / Cline / Continue\n\nMost MCP-aware editors use a similar `mcpServers` config block. See your client's documentation for the exact location.\n\n## Get API keys\n\nCreate API keys at [porkbun.com/account/api](https://porkbun.com/account/api). You'll need both the public key (`pk1_\u2026`) and the secret key (`sk1_\u2026`).\n\nBy default, API access is opt-in per domain. To use the API to manage all your domains, enable the \"Opt In All Domains\" toggle in the same settings page. Otherwise you'll need to enable API access for each domain individually under Domain Management.\n\n### Recommended: scope the key to your agent\n\nEach API key supports two optional restrictions, set via the gear icon next to the key in [porkbun.com/account/api](https://porkbun.com/account/api):\n\n- **Allowed IPs** \u2014 one entry per line; supports bare IPv4/IPv6 plus CIDR ranges (`198.51.100.0/24`, `2001:db8::/32`). Requests from other IPs fail with HTTP 403 `IP_NOT_ALLOWED` before any other check runs.\n- **Allowed domains** \u2014 one entry per line, exact match. Operations against domains not in the list fail with HTTP 403 `DOMAIN_NOT_ALLOWED`.\n\nEmpty fields = no restriction (matches current behavior). When you give an MCP server a key, the recommended pattern is:\n\n1. Create a fresh key dedicated to the agent (not your master key).\n2. List the specific domains the agent should manage.\n3. If you know the agent's egress IP, list it too.\n\nThe blast radius of an accidentally-leaked key drops to \"operations on these domains from this IP\" instead of \"anything on the account.\"\n\n## Environment variables\n\n| Variable | Required | Purpose |\n|---|---|---|\n| `PORKBUN_API_KEY` | for live ops | Your Porkbun public API key. Omit to use only the credential-free documentation tools. |\n| `PORKBUN_SECRET_API_KEY` | for live ops | Your Porkbun secret API key. Omit to use only the credential-free documentation tools. |\n| `PORKBUN_BASE_URL` | no | Override the API base URL (e.g. for testing against `api-betamax.porkbun.com/api/json/v3`) |\n| `PORKBUN_DOCS_BASE` | no | Override the docs host used by the `*_doc(s)` tools (default `https://porkbun.com`) |\n\n## Local development\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/oborseth/porkbun-mcp",
+      "status": "configuration-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.baremetrics.bm-mcp",
+      "title": "Baremetrics",
+      "slug": "baremetrics",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.baremetrics.bm-mcp",
+      "checkedAt": "2026-09-26T11:15:34.897434+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/baremetrics/bm-mcp/main/README.md",
+        "https://github.com/baremetrics/bm-mcp/releases"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/baremetrics/bm-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.blueconic.blueconic-mcp",
+      "title": "BlueConic",
+      "slug": "blueconic",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.blueconic.blueconic-mcp",
+      "checkedAt": "2026-09-26T11:15:35.215501+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/blueconic/blueconic-mcp/main/README.md",
+        "https://github.com/blueconic/blueconic-mcp/releases/tag/v1.1.3"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/blueconic/blueconic-mcp/releases/latest/download/blueconic-mcp.mcpb",
+          "evidence": "https://raw.githubusercontent.com/blueconic/blueconic-mcp/main/README.md",
+          "name": "blueconic-mcp.mcpb"
+        },
+        {
+          "url": "https://github.com/blueconic/blueconic-mcp/releases/download/v1.1.3/blueconic-mcp-1.1.3.mcpb",
+          "evidence": "https://github.com/blueconic/blueconic-mcp/releases/expanded_assets/v1.1.3",
+          "name": "blueconic-mcp-1.1.3.mcpb"
+        },
+        {
+          "url": "https://github.com/blueconic/blueconic-mcp/releases/download/v1.1.3/blueconic-mcp.mcpb",
+          "evidence": "https://github.com/blueconic/blueconic-mcp/releases/expanded_assets/v1.1.3",
+          "name": "blueconic-mcp.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/blueconic/blueconic-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.celayix-open-source.celayix-mcp",
+      "title": "Celayix",
+      "slug": "celayix",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.celayix-open-source.celayix-mcp",
+      "checkedAt": "2026-09-26T11:15:35.249448+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/celayix-open-source/celayix-mcp",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.karanb192.reddit-mcp-buddy",
+      "title": "Reddit MCP Buddy",
+      "slug": "reddit-mcp-buddy",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.karanb192.reddit-mcp-buddy",
+      "checkedAt": "2026-09-26T11:15:35.262019+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/karanb192/reddit-mcp-buddy/main/README.md",
+        "https://github.com/karanb192/reddit-mcp-buddy/releases/tag/v1.1.14"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/karanb192/reddit-mcp-buddy/releases/latest/download/reddit-mcp-buddy.mcpb",
+          "evidence": "https://raw.githubusercontent.com/karanb192/reddit-mcp-buddy/main/README.md",
+          "name": "reddit-mcp-buddy.mcpb"
+        },
+        {
+          "url": "https://github.com/karanb192/reddit-mcp-buddy/releases/download/v1.1.14/reddit-mcp-buddy.mcpb",
+          "evidence": "https://github.com/karanb192/reddit-mcp-buddy/releases/expanded_assets/v1.1.14",
+          "name": "reddit-mcp-buddy.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"reddit\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"reddit-mcp-buddy\"]\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/karanb192/reddit-mcp-buddy",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.microsoft.mcp-linux-x64",
+      "title": "Azure MCP Server",
+      "slug": "azure-mcp-server-76eac1",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.microsoft.mcp-linux-x64",
+      "checkedAt": "2026-09-26T11:15:35.278860+00:00",
+      "sources": [],
+      "packages": [],
+      "configurations": [],
+      "errors": [
+        "README main: HTTP Error 404: Not Found",
+        "README master: HTTP Error 404: Not Found",
+        "Release: HTTP Error 404: Not Found"
+      ],
+      "repository": "https://github.com/microsoft/mcp-linux-x64",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.quinbook.quinbook-mcp",
+      "title": "Quinbook",
+      "slug": "quinbook",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.quinbook.quinbook-mcp",
+      "checkedAt": "2026-09-26T11:15:35.542052+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/quinbook/quinbook-mcp/main/README.md",
+        "https://github.com/quinbook/quinbook-mcp/releases/tag/v0.2.9"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/Quinbook/quinbook-mcp/releases/download/v0.2.9/quinbook-0.2.9.mcpb",
+          "evidence": "https://github.com/quinbook/quinbook-mcp/releases/expanded_assets/v0.2.9",
+          "name": "quinbook-0.2.9.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/quinbook/quinbook-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.airmail.airmail-mcp",
+      "title": "Airmail",
+      "slug": "airmail",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.airmail.airmail-mcp",
+      "checkedAt": "2026-09-26T11:15:35.861065+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/airmail/airmail-mcp/main/README.md",
+        "https://github.com/airmail/airmail-mcp/releases/tag/v1.0.24"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/Airmail/airmail-mcp/releases/download/v1.0.24/airmail-mcp.mcpb",
+          "evidence": "https://github.com/airmail/airmail-mcp/releases/expanded_assets/v1.0.24",
+          "name": "airmail-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "### Windsurf\n\nAdd to `~/.codeium/windsurf/mcp_config.json`:\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/airmail/airmail-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.pasteapp.paste-mcp",
+      "title": "Pasteapp",
+      "slug": "pasteapp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.pasteapp.paste-mcp",
+      "checkedAt": "2026-09-26T11:15:35.931133+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/pasteapp/paste-mcp/main/README.md",
+        "https://github.com/pasteapp/paste-mcp/releases/tag/v0.1.3"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/pasteapp/paste-mcp/releases/download/v0.1.3/paste.mcpb",
+          "evidence": "https://github.com/pasteapp/paste-mcp/releases/expanded_assets/v0.1.3",
+          "name": "paste.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/pasteapp/paste-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.automoxcommunity.automox-mcp",
+      "title": "Automox",
+      "slug": "automox",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.automoxcommunity.automox-mcp",
+      "checkedAt": "2026-09-26T11:15:36.081925+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/automoxcommunity/automox-mcp/main/README.md",
+        "https://github.com/automoxcommunity/automox-mcp/releases/tag/v2.2.9"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/AutomoxCommunity/automox-mcp/releases/download/v2.2.9/automox-mcp-2.2.9.mcpb",
+          "evidence": "https://github.com/automoxcommunity/automox-mcp/releases/expanded_assets/v2.2.9",
+          "name": "automox-mcp-2.2.9.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/automoxcommunity/automox-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.denodo.denodocommunity-claude-vdp-connector",
+      "title": "Denodo MCP Connector",
+      "slug": "denodo-mcp-connector",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.denodo.denodocommunity-claude-vdp-connector",
+      "checkedAt": "2026-09-26T11:15:36.212049+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/denodo/denodocommunity-claude-vdp-connector/main/README.md",
+        "https://github.com/denodo/denodocommunity-claude-vdp-connector/releases/tag/1.3.2"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/denodo/denodocommunity-claude-vdp-connector/releases/download/1.3.2/denodo-mcpb-bundle_v1.3.2.mcpb",
+          "evidence": "https://github.com/denodo/denodocommunity-claude-vdp-connector/releases/expanded_assets/1.3.2",
+          "name": "denodo-mcpb-bundle_v1.3.2.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/denodo/denodocommunity-claude-vdp-connector",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.commercelayer.mcp-server-metrics",
+      "title": "Commerce Layer Metrics",
+      "slug": "commerce-layer-metrics",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.commercelayer.mcp-server-metrics",
+      "checkedAt": "2026-09-26T11:15:36.237610+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/commercelayer/mcp-server-metrics/main/README.md",
+        "https://github.com/commercelayer/mcp-server-metrics/releases/tag/v1.2.4"
+      ],
+      "packages": [],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/commercelayer/mcp-server-metrics",
+      "status": "publisher-setup"
+    },
+    {
+      "id": "connector.ant.dir.gh.droplinked.droplinked-mcp-extension",
+      "title": "droplinked",
+      "slug": "droplinked",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.droplinked.droplinked-mcp-extension",
+      "checkedAt": "2026-09-26T11:15:36.802829+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/droplinked/droplinked-mcp-extension/main/README.md",
+        "https://github.com/droplinked/droplinked-mcp-extension/releases/tag/droplinked-mcp-0.1.1"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/droplinked/droplinked-mcp-extension/releases/download/droplinked-mcp-0.1.1/droplinked-mcp-0.1.1.mcpb",
+          "evidence": "https://github.com/droplinked/droplinked-mcp-extension/releases/expanded_assets/droplinked-mcp-0.1.1",
+          "name": "droplinked-mcp-0.1.1.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/droplinked/droplinked-mcp-extension",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.ipgeolocation.ipgeolocation-io-mcp",
+      "title": "IPGeolocation.io MCP Server",
+      "slug": "ipgeolocation-io-mcp-server",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.ipgeolocation.ipgeolocation-io-mcp",
+      "checkedAt": "2026-09-26T11:15:36.961579+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/ipgeolocation/ipgeolocation-io-mcp/main/README.md",
+        "https://github.com/ipgeolocation/ipgeolocation-io-mcp/releases/tag/v2.0.0"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/IPGeolocation/ipgeolocation-io-mcp/releases/download/v2.0.0/ipgeolocation-ipgeolocation-io-mcp-2.0.0.mcpb",
+          "evidence": "https://github.com/ipgeolocation/ipgeolocation-io-mcp/releases/expanded_assets/v2.0.0",
+          "name": "ipgeolocation-ipgeolocation-io-mcp-2.0.0.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"ipgeolocation\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"ipgeolocation-io-mcp\"],\n      \"env\": {\n        \"IPGEOLOCATION_API_KEY\": \"<YOUR_API_KEY>\"\n      }\n    }\n  }\n}\n",
+        "Restart Cursor after saving.\n\n### Windsurf\n\nAdd to `~/.codeium/windsurf/mcp_config.json`:\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/ipgeolocation/ipgeolocation-io-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.litmusautomation.litmus-mcp-server",
+      "title": "Litmus MCP",
+      "slug": "litmus-mcp",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.litmusautomation.litmus-mcp-server",
+      "checkedAt": "2026-09-26T11:15:37.090632+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/litmusautomation/litmus-mcp-server/main/README.md",
+        "https://github.com/litmusautomation/litmus-mcp-server/releases/tag/v1.4.2"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/litmusautomation/litmus-mcp-server/releases/download/v1.4.2/litmus-mcp.mcpb",
+          "evidence": "https://github.com/litmusautomation/litmus-mcp-server/releases/expanded_assets/v1.4.2",
+          "name": "litmus-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "Or use `.vscode/mcp.json` in your project.\n\n[VS Code MCP Docs](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)\n\n---\n\n### Windsurf\n\nAdd to `~/.codeium/windsurf/mcp_config.json`:\n\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/litmusautomation/litmus-mcp-server",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.lyrenth.lyrenth-mcp",
+      "title": "Lyrenth",
+      "slug": "lyrenth",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.lyrenth.lyrenth-mcp",
+      "checkedAt": "2026-09-26T11:15:37.341108+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/lyrenth/lyrenth-mcp/main/README.md",
+        "https://github.com/lyrenth/lyrenth-mcp/releases/tag/v0.1.6"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/lyrenth/lyrenth-mcp/releases/download/v0.1.6/lyrenth-mcp.mcpb",
+          "evidence": "https://github.com/lyrenth/lyrenth-mcp/releases/expanded_assets/v0.1.6",
+          "name": "lyrenth-mcp.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"lyrenth\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"lyrenth-mcp\"],\n      \"env\": { \"LYRENTH_API_KEY\": \"aiwk_your_key_here\" }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/lyrenth/lyrenth-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.ravendb.ravendb-mcp",
+      "title": "RavenDB",
+      "slug": "ravendb",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.ravendb.ravendb-mcp",
+      "checkedAt": "2026-09-26T11:15:37.393743+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/ravendb/ravendb-mcp/main/README.md",
+        "https://github.com/ravendb/ravendb-mcp/releases/tag/v1.0.4"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/ravendb/ravendb-mcp/releases/download/v1.0.4/ravendb-mcp-1.0.4.mcpb",
+          "evidence": "https://github.com/ravendb/ravendb-mcp/releases/expanded_assets/v1.0.4",
+          "name": "ravendb-mcp-1.0.4.mcpb"
+        }
+      ],
+      "configurations": [],
+      "errors": [],
+      "repository": "https://github.com/ravendb/ravendb-mcp",
+      "status": "package-found"
+    },
+    {
+      "id": "connector.ant.dir.gh.smartlink-basics.flitiq-mcp",
+      "title": "FlitIQ \u2014 FMCSA Carrier Intelligence",
+      "slug": "flitiq-fmcsa-carrier-intelligence",
+      "directoryUrl": "https://claude.ai/directory/ant.dir.gh.smartlink-basics.flitiq-mcp",
+      "checkedAt": "2026-09-26T11:15:37.755431+00:00",
+      "sources": [
+        "https://raw.githubusercontent.com/smartlink-basics/flitiq-mcp/main/README.md",
+        "https://github.com/alsermeno/flitiq-mcp/releases/tag/flitiq-mcp-0.1.5"
+      ],
+      "packages": [
+        {
+          "url": "https://github.com/alsermeno/flitiq-mcp/releases/download/flitiq-mcp-0.1.5/flitiq-mcp-0.1.5.mcpb",
+          "evidence": "https://github.com/alsermeno/flitiq-mcp/releases/expanded_assets/flitiq-mcp-0.1.5",
+          "name": "flitiq-mcp-0.1.5.mcpb"
+        }
+      ],
+      "configurations": [
+        "{\n  \"mcpServers\": {\n    \"flitiq\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"github:alsermeno/flitiq-mcp\"],\n      \"env\": {\n        \"FLITIQ_API_KEY\": \"fliq_live_your_key_here\"\n      }\n    }\n  }\n}\n"
+      ],
+      "errors": [],
+      "repository": "https://github.com/smartlink-basics/flitiq-mcp",
+      "status": "package-found"
+    }
+  ]
+}

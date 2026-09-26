@@ -1,0 +1,288 @@
+{
+  "schema": 1,
+  "guides": [
+    {
+      "slug": "asana",
+      "endpoint": "https://mcp.asana.com/v2/mcp",
+      "summary": "Registered OAuth client required. Your personal Asana sign-in is independent of gateway. A URL-only registration cannot authenticate.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": true,
+      "steps": [
+        {
+          "title": "Create an Asana MCP app",
+          "description": "Sign in with your personal account; create an app of type MCP app. Keep its Client ID and Client Secret private.",
+          "url": "https://app.asana.com/my-apps"
+        },
+        {
+          "title": "Allow your workspace",
+          "description": "Manage distribution \u2192 Specific workspaces \u2192 select your personal workspace.",
+          "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server"
+        },
+        {
+          "title": "Configure client and callback",
+          "description": "Claude Code supports client ID/secret pre-registration. Desktop needs a compatible OAuth configuration or local bridge. Register exactly the callback used by that client; do not reuse Anthropic or gateway callbacks.",
+          "url": "https://developers.asana.com/docs/connecting-mcp-clients-to-asanas-v2-server"
+        },
+        {
+          "title": "Authorize your personal account",
+          "description": "Complete browser consent only after client credentials and callback are configured. This app currently registers the endpoint; it does not provision the OAuth client.",
+          "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server"
+        }
+      ]
+    },
+    {
+      "slug": "slack",
+      "endpoint": "https://mcp.slack.com/mcp",
+      "summary": "No automatic client registration. Requires a registered Slack app or a supported partner client.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": true,
+      "steps": [
+        {
+          "title": "Choose the authentication route",
+          "description": "Partner integrations and custom internal apps have different setup flows. The hosted Claude integration is not automatically inherited by a gateway Desktop profile.",
+          "url": "https://docs.slack.dev/ai/slack-mcp-server/"
+        },
+        {
+          "title": "Register a Slack app",
+          "description": "Custom clients need an internal or Marketplace-published app. Unlisted apps cannot use Slack MCP.",
+          "url": "https://api.slack.com/apps"
+        },
+        {
+          "title": "Set OAuth permissions and callback",
+          "description": "Configure user scopes for the tools you need, app credentials, and the exact callback used by the client. Workspace approval may be required.",
+          "url": "https://docs.slack.dev/ai/slack-mcp-server/developing/"
+        },
+        {
+          "title": "Authorize the workspace",
+          "description": "Sign in to the desired workspace. A server URL alone does not supply the registered OAuth application.",
+          "url": "https://docs.slack.dev/ai/slack-mcp-server/"
+        }
+      ]
+    },
+    {
+      "slug": "notion",
+      "endpoint": "https://mcp.notion.com/mcp",
+      "summary": "Hosted Notion MCP uses interactive OAuth. Select the workspace and pages you want to share.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": false,
+      "steps": [
+        {
+          "title": "Review Notion setup",
+          "description": "Use the official hosted server and a client with remote OAuth support.",
+          "url": "https://developers.notion.com/docs/get-started-with-mcp"
+        },
+        {
+          "title": "Select your workspace and pages",
+          "description": "During authorization, select the intended account/workspace and permitted content.",
+          "url": "https://www.notion.so/"
+        },
+        {
+          "title": "Connect and test",
+          "description": "After registration, authorize in your client and test access to a shared page.",
+          "url": "https://developers.notion.com/docs/get-started-with-mcp"
+        }
+      ]
+    },
+    {
+      "slug": "linear",
+      "endpoint": "https://mcp.linear.app/mcp",
+      "summary": "OAuth with automatic client registration is supported. API-key authentication is an alternative.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": false,
+      "steps": [
+        {
+          "title": "Review setup and permissions",
+          "description": "Read-only endpoint /mcp/readonly is available. Default /mcp permits read/write.",
+          "url": "https://linear.app/docs/mcp"
+        },
+        {
+          "title": "Authorize the intended workspace",
+          "description": "Use client OAuth sign-in. Separate workspace connections need separate authentication contexts.",
+          "url": "https://linear.app/docs/mcp"
+        }
+      ]
+    },
+    {
+      "slug": "atlassian",
+      "endpoint": "https://mcp.atlassian.com/v2/mcp",
+      "summary": "Rovo supports browser OAuth. Site access and organization policies apply.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": false,
+      "steps": [
+        {
+          "title": "Check your Atlassian site",
+          "description": "Ensure your account can access the Jira/Confluence resources you need.",
+          "url": "https://developer.atlassian.com/cloud/rovo-mcp/guides/getting-started/"
+        },
+        {
+          "title": "Review administrator controls",
+          "description": "Some tools require enabled permission groups. API-token authentication requires admin enablement.",
+          "url": "https://developer.atlassian.com/cloud/rovo-mcp/guides/authentication-and-authorization/"
+        },
+        {
+          "title": "Authorize in your client",
+          "description": "Complete browser consent using the intended Atlassian account.",
+          "url": "https://developer.atlassian.com/cloud/rovo-mcp/guides/configuring-oauth-2-1/"
+        }
+      ]
+    },
+    {
+      "slug": "figma",
+      "endpoint": "https://mcp.figma.com/mcp",
+      "summary": "Remote Figma MCP requires Figma sign-in; tool limits depend on plan and seat.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": false,
+      "steps": [
+        {
+          "title": "Check plan and client support",
+          "description": "Review current eligibility, usage limits, and supported remote clients.",
+          "url": "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/"
+        },
+        {
+          "title": "Authorize your Figma account",
+          "description": "Complete OAuth in the MCP client. Access follows your file permissions.",
+          "url": "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/"
+        }
+      ]
+    },
+    {
+      "slug": "monday",
+      "endpoint": "https://mcp.monday.com/mcp",
+      "summary": "Choose the monday.com authentication route appropriate for your client.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": false,
+      "steps": [
+        {
+          "title": "Choose personal or public integration",
+          "description": "Personal API token and public OAuth integration have different prerequisites.",
+          "url": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp"
+        },
+        {
+          "title": "Review OAuth registration",
+          "description": "Public integrations use the documented client registration process.",
+          "url": "https://developer.monday.com/api-reference/docs/mcp-dynamic-client-registration"
+        },
+        {
+          "title": "Personal-token alternative",
+          "description": "Follow the personal API-token guide; do not put tokens in arbitrary headers or paste them into chat.",
+          "url": "https://developer.monday.com/api-reference/docs/mcp-api-token"
+        }
+      ]
+    },
+    {
+      "slug": "hubspot",
+      "endpoint": "https://mcp.hubspot.com/anthropic",
+      "summary": "HubSpot requires OAuth with PKCE. Confirm the endpoint and supported client route.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": false,
+      "steps": [
+        {
+          "title": "Review hosted MCP requirements",
+          "description": "The catalog endpoint is an Anthropic integration route; do not assume it supports every local client.",
+          "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server"
+        },
+        {
+          "title": "Authorize the intended HubSpot account",
+          "description": "Confirm account permissions and requested access before granting consent.",
+          "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server"
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-365",
+      "endpoint": "https://microsoft365.mcp.claude.com/mcp",
+      "summary": "Hosted Anthropic connector and independent local Microsoft Graph server are different integrations.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": true,
+      "steps": [
+        {
+          "title": "Review hosted connector requirements",
+          "description": "Check supported accounts, tenant consent, and the official connector setup.",
+          "url": "https://support.claude.com/en/articles/15183774-connect-to-microsoft-365"
+        },
+        {
+          "title": "Check Desktop callback compatibility",
+          "description": "Hosted connector setup does not establish that a gateway local client can use Anthropic OAuth credentials. Client registration and callback must be compatible.",
+          "url": "https://support.claude.com/en/articles/15183774-connect-to-microsoft-365"
+        },
+        {
+          "title": "Consider the local alternative",
+          "description": "Select Local alternative in this app for Softeria\u2019s independent device-code server; Node/npx and tenant approval may be required.",
+          "url": "https://github.com/Softeria/ms-365-mcp-server"
+        }
+      ]
+    },
+    {
+      "slug": "google-drive",
+      "endpoint": "https://drivemcp.googleapis.com/mcp/v1",
+      "summary": "Google Workspace MCP is a Developer Preview with Cloud-project and OAuth prerequisites.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": true,
+      "steps": [
+        {
+          "title": "Check preview eligibility",
+          "description": "Membership in the Google Workspace Developer Preview Program is required.",
+          "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        },
+        {
+          "title": "Configure your Cloud project",
+          "description": "Enable the relevant APIs and configure OAuth branding, audience and data access.",
+          "url": "https://console.cloud.google.com/auth/overview"
+        },
+        {
+          "title": "Create client credentials",
+          "description": "Follow the documented client type and callback requirements; managed Workspace policies may apply.",
+          "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        }
+      ]
+    },
+    {
+      "slug": "gmail",
+      "endpoint": "https://gmailmcp.googleapis.com/mcp/v1",
+      "summary": "Google Workspace MCP is a Developer Preview with Cloud-project and OAuth prerequisites.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": true,
+      "steps": [
+        {
+          "title": "Check preview eligibility",
+          "description": "Membership in the Google Workspace Developer Preview Program is required.",
+          "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        },
+        {
+          "title": "Configure your Cloud project",
+          "description": "Enable the relevant APIs and configure OAuth branding, audience and data access.",
+          "url": "https://console.cloud.google.com/auth/overview"
+        },
+        {
+          "title": "Create client credentials",
+          "description": "Follow the documented client type and callback requirements; managed Workspace policies may apply.",
+          "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        }
+      ]
+    },
+    {
+      "slug": "google-calendar",
+      "endpoint": "https://calendarmcp.googleapis.com/mcp/v1",
+      "summary": "Google Workspace MCP is a Developer Preview with Cloud-project and OAuth prerequisites.",
+      "reviewed": "2026-09-26",
+      "requiresCredentials": true,
+      "steps": [
+        {
+          "title": "Check preview eligibility",
+          "description": "Membership in the Google Workspace Developer Preview Program is required.",
+          "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        },
+        {
+          "title": "Configure your Cloud project",
+          "description": "Enable the relevant APIs and configure OAuth branding, audience and data access.",
+          "url": "https://console.cloud.google.com/auth/overview"
+        },
+        {
+          "title": "Create client credentials",
+          "description": "Follow the documented client type and callback requirements; managed Workspace policies may apply.",
+          "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+        }
+      ]
+    }
+  ]
+}
