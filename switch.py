@@ -35,6 +35,10 @@ import gateway_profiles as gp
 ACTIVE_GATEWAY = gp.selected() or {"id":"unconfigured","name":"No gateway configured","claudeUrl":"","codexUrl":"","auth":"helper","helper":str(HELPER)}
 GATEWAY_URL = ACTIVE_GATEWAY["claudeUrl"]
 CODE_GATEWAY_URL = ACTIVE_GATEWAY.get("claudeCodeUrl",GATEWAY_URL)
+# Keep the Ollama profile separate from profiles owned by other apps.
+if ACTIVE_GATEWAY.get('kind')=='Ollama':
+    GATEWAY_PROFILE_ID=str(__import__('uuid').uuid5(__import__('uuid').NAMESPACE_DNS,'ai-control-studio.desktop.'+ACTIVE_GATEWAY['id']))
+    GATEWAY_PROFILE=DESKTOP_ROOT/'configLibrary'/f'{GATEWAY_PROFILE_ID}.json'
 HELPER = Path(gp.helper(ACTIVE_GATEWAY))
 OLD_EXPORT = f'export ANTHROPIC_BASE_URL="{GATEWAY_URL}"'
 
@@ -114,6 +118,9 @@ def apply(desktop_on, code_on):
     desktop = read_json(DESKTOP_SETTINGS)
     meta = read_json(PROFILE_META)
     profile = read_json(GATEWAY_PROFILE)
+    if not profile and desktop_on and meta.get('appliedId'):
+        previous=DESKTOP_ROOT/'configLibrary'/f"{meta['appliedId']}.json"
+        profile=read_json(previous)
     code = read_json(CODE_SETTINGS)
     env = code.setdefault("env", {})
     if not isinstance(env, dict):

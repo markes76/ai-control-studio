@@ -56,6 +56,12 @@ with patch('gateway_profiles.check_desktop_gateway'):
  v=gp.handle({'op':'profile-save','name':'Ollama edited','kind':'Ollama','claudeUrl':'http://localhost:11434','codexUrl':'http://localhost:11434/v1','auth':'local','claudeModel':'test:latest','applyActive':True})
 assert v['reloadTargets']==['desktop']
 assert v['applied']['code_gateway']
+with patch('gateway_profiles.check_desktop_gateway'):
+ selected=gp.handle({'op':'profile-select','id':v['selected'],'applyActive':True})
+assert selected['applied']['desktop_gateway']
+assert selected['applied']['code_gateway']
+assert selected['reloadTargets']==['desktop']
+assert json.loads(r.PROFILE_META.read_text())['appliedId']==r.GATEWAY_PROFILE_ID
 c.apply(True,'test:latest')
 assert json.loads(r.CODE_SETTINGS.read_text())['env']['ANTHROPIC_MODEL']=='test:latest'
 assert 'http://localhost:11434/v1' in c.CONFIG.read_text()

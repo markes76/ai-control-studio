@@ -44,7 +44,7 @@ def handle(a):
  if op=='profiles':return {'ok':True,**d}
  if op=='profile-select':
   if a['id'] not in [p['id'] for p in d['profiles']]:raise ValueError('Unknown profile.')
-  d['selected']=a['id']
+  d['selected']=a['id'];p=next(x for x in d['profiles'] if x['id']==a['id'])
  elif op=='profile-save':
   name=a['name'].strip()
   if not name:raise ValueError('Profile name is required.')
@@ -96,9 +96,12 @@ def handle(a):
  else:raise ValueError('Unknown profile operation.')
  ROOT.mkdir(parents=True,exist_ok=True);r.back_up([FILE]);r.write_atomic(FILE,r.dump_json(d))
  reload_targets=[];applied=None
- if a.get('applyActive') is True and op=='profile-save':
+ if a.get('applyActive') is True and op in ('profile-save','profile-select'):
   import codex_switch as c
-  cs=c.status();active=before['desktop_gateway'] or before['code_gateway'] or cs['codex_gateway']
+  cs=c.status();desktop_enabled=before.get('desktop_mode')=='3p'
+  code_settings=r.read_json(r.CODE_SETTINGS);code_env=code_settings.get('env',{})
+  code_enabled=before.get('code_gateway',False) or any(code_env.get('ANTHROPIC_BASE_URL')==x.get('claudeCodeUrl',x['claudeUrl']) and code_settings.get('apiKeyHelper')==helper(x) for x in d['profiles'])
+  active=desktop_enabled or code_enabled or cs['codex_gateway']
   if active:
    try:
     importlib.reload(r);importlib.reload(c)
@@ -106,12 +109,12 @@ def handle(a):
     model=p.get('claudeModel') or cs.get('codex_model','')
     if cs['codex_gateway']:
      if model not in c.models()['models']:raise ValueError('Select a model supported by this gateway before applying the active Codex route.')
-    desktop_choice=before['desktop_gateway'] if before['desktop_gateway'] or before.get('desktop_mode')=='1p' else None
-    applied=bundle.apply(desktop_choice,before['code_gateway'],cs['codex_gateway'],model)
+    desktop_choice=desktop_enabled
+    applied=bundle.apply(desktop_choice,code_enabled,cs['codex_gateway'],model)
     if desktop_choice is True:reload_targets.append('desktop')
     if cs['codex_gateway']:reload_targets.append('codex')
    except Exception:
-    if p['auth']!='helper':
+    if op=='profile-save' and p['auth']!='helper':
      if old_helper is None:hp_before.unlink(missing_ok=True)
      else:r.write_atomic(hp_before,old_helper.decode());hp_before.chmod(old_helper_mode)
     if previous_file is None:FILE.unlink(missing_ok=True)

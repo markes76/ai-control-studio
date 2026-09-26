@@ -29,7 +29,7 @@ Create a profile, then configure:
 - **Model discovery URL:** optional override when discovery lives at a separate endpoint.
 - **Credential source:** macOS Keychain, environment-variable reference or executable helper. Enter a reference or helper path, not an API key in the URL or profile text fields.
 - **Apply this profile to clients already using a gateway:** enabled by default when saving. Updates currently enabled routes and offers a normal quit/reopen for affected running desktop apps. Uncheck it to save/select only; apply routing later in Connections. CLI sessions must be started again separately.
-- **Save & select / Use this profile:** save the profile and selected behavior, or select an existing profile. Use Connections to enable additional clients.
+- **Save & select / Apply to enabled clients:** save or choose a profile. With the apply checkbox enabled, update clients already using a gateway and offer to restart them. Use Connections to enable additional clients.
 
 HTTPS is required for remote profiles; localhost HTTP is supported. Finder-launched applications do not automatically inherit every shell environment export. Keychain references avoid that dependency. Gateway support for streaming, tools, model discovery and the Responses API must be provided by your deployment.
 
