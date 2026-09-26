@@ -40,6 +40,9 @@ r.CODE_SETTINGS.write_text(json.dumps({'env':{'ANTHROPIC_MODEL':'previous'},'per
 gp.handle({'op':'profile-save','name':'Ollama','kind':'Ollama','claudeUrl':'http://localhost:11434','codexUrl':'http://localhost:11434/v1','auth':'local','claudeModel':'test:latest'})
 importlib.reload(r);importlib.reload(c)
 r.apply(True,True)
+profile=json.loads(r.GATEWAY_PROFILE.read_text())
+assert profile['inferenceCredentialKind']=='static' and profile['inferenceGatewayApiKey']=='ollama'
+assert 'inferenceCredentialHelper' not in profile
 v=gp.handle({'op':'profile-save','name':'Ollama edited','kind':'Ollama','claudeUrl':'http://localhost:11434','codexUrl':'http://localhost:11434/v1','auth':'local','claudeModel':'test:latest','applyActive':True})
 assert v['reloadTargets']==['desktop']
 assert v['applied']['code_gateway']

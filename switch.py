@@ -130,6 +130,11 @@ def apply(desktop_on, code_on):
             profile["inferenceCredentialHelper"]=str(HELPER)
             profile["inferenceCredentialHelperTtlSec"]=300
             profile["inferenceGatewayAuthScheme"]="bearer"
+            if ACTIVE_GATEWAY.get('kind')=='Ollama':
+                # Local Ollama ignores this documented, non-secret API credential.
+                profile['inferenceGatewayApiKey']='ollama'
+                profile.pop('inferenceCredentialHelper',None)
+                profile.pop('inferenceCredentialHelperTtlSec',None)
         elif original_path.exists():
             for k in list(profile):
                 if k.startswith("inference"):profile.pop(k)
