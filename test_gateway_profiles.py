@@ -13,6 +13,12 @@ class OllamaProfilesTests(unittest.TestCase):
    result=gp.handle(self.request());profile=result['profiles'][0]
    self.assertEqual(gp.token(profile),'ollama');self.assertEqual(profile['claudeModel'],'example:latest')
    self.assertNotIn('secretRef',profile)
+ def test_existing_executable_helper_profiles_still_save(self):
+  helper=self.root/'existing-helper.sh';helper.write_text('#!/bin/sh\nprintf %s example\n');helper.chmod(0o700)
+  req=self.request();req.update(kind='Custom',auth='helper',helper=str(helper))
+  with patch('switch.inspect',return_value={}),patch('switch.back_up'):
+   result=gp.handle(req)
+  self.assertEqual(result['profiles'][0]['helper'],str(helper))
  def test_local_auth_cannot_be_used_remotely(self):
   req=self.request();req['codexUrl']='https://example.com/v1'
   with patch('switch.inspect',return_value={}):

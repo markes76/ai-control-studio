@@ -62,7 +62,7 @@ def handle(a):
    model=a.get('claudeModel','').strip()
    if not model or len(model)>200 or any(c.isspace() for c in model):raise ValueError('Choose an exact Ollama model ID.')
    p['claudeModel']=model
-  hp_before=Path(helper(p));old_helper=hp_before.read_bytes() if hp_before.exists() and p['auth']!='helper' else None
+  hp_before=ROOT/('credential-'+p['id']+'.sh');old_helper=hp_before.read_bytes() if hp_before.exists() and p['auth']!='helper' else None
   old_helper_mode=hp_before.stat().st_mode & 0o777 if hp_before.exists() else 0o700
   if p['auth']=='local':
    if p['kind']!='Ollama':raise ValueError('Local placeholder credentials are only supported for localhost Ollama.')
